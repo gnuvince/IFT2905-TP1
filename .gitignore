@@ -1,0 +1,4 @@
+SimpleIMDb
+*.o
+core.*
+*.tgz
