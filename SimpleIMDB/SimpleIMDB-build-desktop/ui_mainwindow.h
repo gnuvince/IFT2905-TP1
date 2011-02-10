@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Wed Feb 9 19:58:19 2011
+** Created: Thu Feb 10 16:41:16 2011
 **      by: Qt User Interface Compiler version 4.7.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -14,7 +14,9 @@
 #include <QtGui/QAction>
 #include <QtGui/QApplication>
 #include <QtGui/QButtonGroup>
+#include <QtGui/QFormLayout>
 #include <QtGui/QFrame>
+#include <QtGui/QHBoxLayout>
 #include <QtGui/QHeaderView>
 #include <QtGui/QLabel>
 #include <QtGui/QLineEdit>
@@ -22,7 +24,9 @@
 #include <QtGui/QMainWindow>
 #include <QtGui/QPlainTextEdit>
 #include <QtGui/QPushButton>
+#include <QtGui/QSpacerItem>
 #include <QtGui/QSplitter>
+#include <QtGui/QVBoxLayout>
 #include <QtGui/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -31,93 +35,229 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralWidget;
-    QLabel *film_cover;
-    QLabel *film_title;
-    QLabel *film_rating;
-    QLabel *film_rank;
-    QLabel *film_country;
-    QLabel *film_runtime;
-    QLabel *film_director;
-    QPlainTextEdit *film_plot;
-    QFrame *line;
-    QPushButton *details_button;
-    QPushButton *search_history;
-    QListWidget *film_actors;
-    QSplitter *splitter;
+    QVBoxLayout *verticalLayout_5;
+    QHBoxLayout *horizontalLayout;
     QLabel *label;
     QLineEdit *search_field;
     QPushButton *search_button;
+    QFrame *line;
+    QVBoxLayout *verticalLayout_3;
+    QHBoxLayout *horizontalLayout_2;
+    QVBoxLayout *verticalLayout_2;
+    QLabel *film_title;
+    QVBoxLayout *verticalLayout_6;
+    QLabel *film_rating;
+    QLabel *film_rank;
+    QSpacerItem *horizontalSpacer;
+    QLabel *film_cover;
+    QPlainTextEdit *film_plot;
+    QVBoxLayout *verticalLayout_4;
+    QLabel *label_2;
+    QSplitter *splitter_2;
+    QListWidget *film_actors;
+    QWidget *widget;
+    QFormLayout *formLayout;
+    QLabel *label_3;
+    QLabel *film_director;
+    QLabel *label_4;
+    QLabel *film_country;
+    QLabel *label_5;
+    QLabel *film_runtime;
+    QLabel *label_6;
+    QLabel *film_genres;
+    QLabel *label_7;
+    QLabel *film_year;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(702, 461);
+        MainWindow->resize(455, 411);
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy.setHorizontalStretch(96);
+        sizePolicy.setVerticalStretch(96);
+        sizePolicy.setHeightForWidth(MainWindow->sizePolicy().hasHeightForWidth());
+        MainWindow->setSizePolicy(sizePolicy);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
-        film_cover = new QLabel(centralWidget);
-        film_cover->setObjectName(QString::fromUtf8("film_cover"));
-        film_cover->setGeometry(QRect(20, 60, 96, 96));
+        verticalLayout_5 = new QVBoxLayout(centralWidget);
+        verticalLayout_5->setSpacing(6);
+        verticalLayout_5->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setSpacing(6);
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        label = new QLabel(centralWidget);
+        label->setObjectName(QString::fromUtf8("label"));
+
+        horizontalLayout->addWidget(label);
+
+        search_field = new QLineEdit(centralWidget);
+        search_field->setObjectName(QString::fromUtf8("search_field"));
+        search_field->setMinimumSize(QSize(200, 0));
+
+        horizontalLayout->addWidget(search_field);
+
+        search_button = new QPushButton(centralWidget);
+        search_button->setObjectName(QString::fromUtf8("search_button"));
+        search_button->setAutoDefault(false);
+        search_button->setDefault(false);
+
+        horizontalLayout->addWidget(search_button);
+
+
+        verticalLayout_5->addLayout(horizontalLayout);
+
+        line = new QFrame(centralWidget);
+        line->setObjectName(QString::fromUtf8("line"));
+        line->setFrameShape(QFrame::HLine);
+        line->setFrameShadow(QFrame::Sunken);
+
+        verticalLayout_5->addWidget(line);
+
+        verticalLayout_3 = new QVBoxLayout();
+        verticalLayout_3->setSpacing(6);
+        verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setSpacing(6);
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        verticalLayout_2 = new QVBoxLayout();
+        verticalLayout_2->setSpacing(6);
+        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         film_title = new QLabel(centralWidget);
         film_title->setObjectName(QString::fromUtf8("film_title"));
-        film_title->setGeometry(QRect(150, 60, 301, 21));
         QFont font;
         font.setPointSize(20);
         film_title->setFont(font);
+
+        verticalLayout_2->addWidget(film_title);
+
+        verticalLayout_6 = new QVBoxLayout();
+        verticalLayout_6->setSpacing(6);
+        verticalLayout_6->setObjectName(QString::fromUtf8("verticalLayout_6"));
         film_rating = new QLabel(centralWidget);
         film_rating->setObjectName(QString::fromUtf8("film_rating"));
-        film_rating->setGeometry(QRect(150, 100, 59, 15));
+
+        verticalLayout_6->addWidget(film_rating);
+
         film_rank = new QLabel(centralWidget);
         film_rank->setObjectName(QString::fromUtf8("film_rank"));
-        film_rank->setGeometry(QRect(240, 100, 59, 15));
-        film_country = new QLabel(centralWidget);
-        film_country->setObjectName(QString::fromUtf8("film_country"));
-        film_country->setGeometry(QRect(20, 180, 59, 15));
-        film_runtime = new QLabel(centralWidget);
-        film_runtime->setObjectName(QString::fromUtf8("film_runtime"));
-        film_runtime->setGeometry(QRect(150, 180, 59, 15));
-        film_director = new QLabel(centralWidget);
-        film_director->setObjectName(QString::fromUtf8("film_director"));
-        film_director->setGeometry(QRect(20, 220, 241, 16));
+
+        verticalLayout_6->addWidget(film_rank);
+
+
+        verticalLayout_2->addLayout(verticalLayout_6);
+
+
+        horizontalLayout_2->addLayout(verticalLayout_2);
+
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer);
+
+        film_cover = new QLabel(centralWidget);
+        film_cover->setObjectName(QString::fromUtf8("film_cover"));
+        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(96);
+        sizePolicy1.setHeightForWidth(film_cover->sizePolicy().hasHeightForWidth());
+        film_cover->setSizePolicy(sizePolicy1);
+        film_cover->setMinimumSize(QSize(0, 96));
+
+        horizontalLayout_2->addWidget(film_cover);
+
+
+        verticalLayout_3->addLayout(horizontalLayout_2);
+
         film_plot = new QPlainTextEdit(centralWidget);
         film_plot->setObjectName(QString::fromUtf8("film_plot"));
-        film_plot->setGeometry(QRect(310, 130, 371, 311));
-        line = new QFrame(centralWidget);
-        line->setObjectName(QString::fromUtf8("line"));
-        line->setGeometry(QRect(0, 40, 761, 16));
-        line->setFrameShape(QFrame::HLine);
-        line->setFrameShadow(QFrame::Sunken);
-        details_button = new QPushButton(centralWidget);
-        details_button->setObjectName(QString::fromUtf8("details_button"));
-        details_button->setGeometry(QRect(150, 140, 61, 20));
-        search_history = new QPushButton(centralWidget);
-        search_history->setObjectName(QString::fromUtf8("search_history"));
-        search_history->setGeometry(QRect(590, 10, 90, 21));
-        film_actors = new QListWidget(centralWidget);
+
+        verticalLayout_3->addWidget(film_plot);
+
+
+        verticalLayout_5->addLayout(verticalLayout_3);
+
+        verticalLayout_4 = new QVBoxLayout();
+        verticalLayout_4->setSpacing(6);
+        verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
+        label_2 = new QLabel(centralWidget);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+
+        verticalLayout_4->addWidget(label_2);
+
+        splitter_2 = new QSplitter(centralWidget);
+        splitter_2->setObjectName(QString::fromUtf8("splitter_2"));
+        splitter_2->setOrientation(Qt::Horizontal);
+        film_actors = new QListWidget(splitter_2);
         film_actors->setObjectName(QString::fromUtf8("film_actors"));
-        film_actors->setGeometry(QRect(20, 240, 256, 192));
-        splitter = new QSplitter(centralWidget);
-        splitter->setObjectName(QString::fromUtf8("splitter"));
-        splitter->setGeometry(QRect(10, 10, 491, 21));
-        splitter->setOrientation(Qt::Horizontal);
-        splitter->setOpaqueResize(true);
-        splitter->setHandleWidth(6);
-        label = new QLabel(splitter);
-        label->setObjectName(QString::fromUtf8("label"));
-        splitter->addWidget(label);
-        search_field = new QLineEdit(splitter);
-        search_field->setObjectName(QString::fromUtf8("search_field"));
-        search_field->setMinimumSize(QSize(200, 0));
-        splitter->addWidget(search_field);
-        search_button = new QPushButton(splitter);
-        search_button->setObjectName(QString::fromUtf8("search_button"));
-        search_button->setDefault(true);
-        splitter->addWidget(search_button);
+        splitter_2->addWidget(film_actors);
+        widget = new QWidget(splitter_2);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        formLayout = new QFormLayout(widget);
+        formLayout->setSpacing(6);
+        formLayout->setContentsMargins(11, 11, 11, 11);
+        formLayout->setObjectName(QString::fromUtf8("formLayout"));
+        formLayout->setContentsMargins(0, 0, 0, 0);
+        label_3 = new QLabel(widget);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+
+        formLayout->setWidget(0, QFormLayout::LabelRole, label_3);
+
+        film_director = new QLabel(widget);
+        film_director->setObjectName(QString::fromUtf8("film_director"));
+
+        formLayout->setWidget(0, QFormLayout::FieldRole, film_director);
+
+        label_4 = new QLabel(widget);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+
+        formLayout->setWidget(2, QFormLayout::LabelRole, label_4);
+
+        film_country = new QLabel(widget);
+        film_country->setObjectName(QString::fromUtf8("film_country"));
+
+        formLayout->setWidget(2, QFormLayout::FieldRole, film_country);
+
+        label_5 = new QLabel(widget);
+        label_5->setObjectName(QString::fromUtf8("label_5"));
+
+        formLayout->setWidget(3, QFormLayout::LabelRole, label_5);
+
+        film_runtime = new QLabel(widget);
+        film_runtime->setObjectName(QString::fromUtf8("film_runtime"));
+
+        formLayout->setWidget(3, QFormLayout::FieldRole, film_runtime);
+
+        label_6 = new QLabel(widget);
+        label_6->setObjectName(QString::fromUtf8("label_6"));
+
+        formLayout->setWidget(4, QFormLayout::LabelRole, label_6);
+
+        film_genres = new QLabel(widget);
+        film_genres->setObjectName(QString::fromUtf8("film_genres"));
+
+        formLayout->setWidget(4, QFormLayout::FieldRole, film_genres);
+
+        label_7 = new QLabel(widget);
+        label_7->setObjectName(QString::fromUtf8("label_7"));
+
+        formLayout->setWidget(1, QFormLayout::LabelRole, label_7);
+
+        film_year = new QLabel(widget);
+        film_year->setObjectName(QString::fromUtf8("film_year"));
+
+        formLayout->setWidget(1, QFormLayout::FieldRole, film_year);
+
+        splitter_2->addWidget(widget);
+
+        verticalLayout_4->addWidget(splitter_2);
+
+
+        verticalLayout_5->addLayout(verticalLayout_4);
+
         MainWindow->setCentralWidget(centralWidget);
         QWidget::setTabOrder(search_field, search_button);
-        QWidget::setTabOrder(search_button, search_history);
-        QWidget::setTabOrder(search_history, details_button);
-        QWidget::setTabOrder(details_button, film_plot);
+        QWidget::setTabOrder(search_button, film_plot);
 
         retranslateUi(MainWindow);
 
@@ -126,19 +266,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0, QApplication::UnicodeUTF8));
-        film_cover->setText(QApplication::translate("MainWindow", "cover", 0, QApplication::UnicodeUTF8));
-        film_title->setText(QApplication::translate("MainWindow", "title", 0, QApplication::UnicodeUTF8));
-        film_rating->setText(QApplication::translate("MainWindow", "rating", 0, QApplication::UnicodeUTF8));
-        film_rank->setText(QApplication::translate("MainWindow", "rank", 0, QApplication::UnicodeUTF8));
-        film_country->setText(QApplication::translate("MainWindow", "country", 0, QApplication::UnicodeUTF8));
-        film_runtime->setText(QApplication::translate("MainWindow", "length", 0, QApplication::UnicodeUTF8));
-        film_director->setText(QApplication::translate("MainWindow", "director", 0, QApplication::UnicodeUTF8));
-        details_button->setText(QApplication::translate("MainWindow", "D\303\251tails", 0, QApplication::UnicodeUTF8));
-#ifndef QT_NO_TOOLTIP
-        search_history->setToolTip(QApplication::translate("MainWindow", "Historique de recherche", 0, QApplication::UnicodeUTF8));
-#endif // QT_NO_TOOLTIP
-        search_history->setText(QApplication::translate("MainWindow", "Historique", 0, QApplication::UnicodeUTF8));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "SimpleIMDb", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("MainWindow", "Titre:", 0, QApplication::UnicodeUTF8));
 #ifndef QT_NO_TOOLTIP
         search_field->setToolTip(QApplication::translate("MainWindow", "Titre du film", 0, QApplication::UnicodeUTF8));
@@ -146,7 +274,22 @@ public:
 #ifndef QT_NO_TOOLTIP
         search_button->setToolTip(QApplication::translate("MainWindow", "Chercher le film", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP
-        search_button->setText(QApplication::translate("MainWindow", "Chercher", 0, QApplication::UnicodeUTF8));
+        search_button->setText(QApplication::translate("MainWindow", "&Chercher", 0, QApplication::UnicodeUTF8));
+        film_title->setText(QString());
+        film_rating->setText(QString());
+        film_rank->setText(QString());
+        film_cover->setText(QString());
+        label_2->setText(QApplication::translate("MainWindow", "Distribution", 0, QApplication::UnicodeUTF8));
+        label_3->setText(QApplication::translate("MainWindow", "R\303\251alisteur:", 0, QApplication::UnicodeUTF8));
+        film_director->setText(QString());
+        label_4->setText(QApplication::translate("MainWindow", "Pays:", 0, QApplication::UnicodeUTF8));
+        film_country->setText(QString());
+        label_5->setText(QApplication::translate("MainWindow", "Dur\303\251e:", 0, QApplication::UnicodeUTF8));
+        film_runtime->setText(QString());
+        label_6->setText(QApplication::translate("MainWindow", "Genres:", 0, QApplication::UnicodeUTF8));
+        film_genres->setText(QString());
+        label_7->setText(QApplication::translate("MainWindow", "Ann\303\251e:", 0, QApplication::UnicodeUTF8));
+        film_year->setText(QString());
     } // retranslateUi
 
 };
