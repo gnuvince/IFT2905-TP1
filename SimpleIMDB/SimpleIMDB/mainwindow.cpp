@@ -27,6 +27,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(this, SIGNAL(set_film_runtime(const QString&)), ui->film_runtime, SLOT(setText(QString)));
     connect(this, SIGNAL(set_film_director(const QString&)), ui->film_director, SLOT(setText(QString)));
     connect(this, SIGNAL(set_film_plot(const QString&)), ui->film_plot, SLOT(setPlainText(QString)));
+    connect(this, SIGNAL(set_film_actors(const QStringList&)), this, SLOT(set_film_actors_slot(const QStringList&)));
 }
 
 MainWindow::~MainWindow()
@@ -50,6 +51,10 @@ void MainWindow::field_dispatcher(const QMap<QString, QStringList> &film, const 
     emit set_film_plot(get_field("plot", film));
     emit set_film_director(get_field("director", film));
     emit set_film_actors(film.value("cast", QList<QString>()));
+}
+
+void MainWindow::set_film_actors_slot(const QStringList &actors) {
+    ui->film_actors->addItems(actors);
 }
 
 

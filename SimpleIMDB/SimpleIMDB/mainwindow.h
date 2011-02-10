@@ -19,6 +19,7 @@ public:
 public slots:
     void field_dispatcher(const QMap<QString,QStringList> &film, const QPixmap &image);
     void search_movie();
+    void set_film_actors_slot(const QStringList &actors);
 
 signals:
     void changeFilmInternet(const QString &film);
@@ -29,7 +30,7 @@ signals:
     void set_film_runtime(const QString &runtime);
     void set_film_director(const QString &director);
     void set_film_plot(const QString &plot);
-    void set_film_actors(const QList<QString> &actors);
+    void set_film_actors(const QStringList &actors);
     void set_film_cover(const QPixmap &pixmap);
 
 private:

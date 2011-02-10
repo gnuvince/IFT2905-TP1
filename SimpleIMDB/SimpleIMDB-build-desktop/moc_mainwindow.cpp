@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mainwindow.h'
 **
-** Created: Wed Feb 9 19:58:21 2011
+** Created: Wed Feb 9 20:11:48 2011
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.0)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_MainWindow[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-      12,   14, // methods
+      13,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -40,11 +40,12 @@ static const uint qt_meta_data_MainWindow[] = {
      212,  203,   11,   11, 0x05,
      244,  239,   11,   11, 0x05,
      274,  267,   11,   11, 0x05,
-     313,  306,   11,   11, 0x05,
+     310,  303,   11,   11, 0x05,
 
  // slots: signature, parameters, type, tag, flags
-     348,  337,   11,   11, 0x0a,
-     400,   11,   11,   11, 0x0a,
+     345,  334,   11,   11, 0x0a,
+     397,   11,   11,   11, 0x0a,
+     412,  267,   11,   11, 0x0a,
 
        0        // eod
 };
@@ -58,10 +59,10 @@ static const char qt_meta_stringdata_MainWindow[] = {
     "set_film_runtime(QString)\0director\0"
     "set_film_director(QString)\0plot\0"
     "set_film_plot(QString)\0actors\0"
-    "set_film_actors(QList<QString>)\0pixmap\0"
+    "set_film_actors(QStringList)\0pixmap\0"
     "set_film_cover(QPixmap)\0film,image\0"
     "field_dispatcher(QMap<QString,QStringList>,QPixmap)\0"
-    "search_movie()\0"
+    "search_movie()\0set_film_actors_slot(QStringList)\0"
 };
 
 const QMetaObject MainWindow::staticMetaObject = {
@@ -101,13 +102,14 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 5: set_film_runtime((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         case 6: set_film_director((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         case 7: set_film_plot((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 8: set_film_actors((*reinterpret_cast< const QList<QString>(*)>(_a[1]))); break;
+        case 8: set_film_actors((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
         case 9: set_film_cover((*reinterpret_cast< const QPixmap(*)>(_a[1]))); break;
         case 10: field_dispatcher((*reinterpret_cast< const QMap<QString,QStringList>(*)>(_a[1])),(*reinterpret_cast< const QPixmap(*)>(_a[2]))); break;
         case 11: search_movie(); break;
+        case 12: set_film_actors_slot((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
         default: ;
         }
-        _id -= 12;
+        _id -= 13;
     }
     return _id;
 }
@@ -169,7 +171,7 @@ void MainWindow::set_film_plot(const QString & _t1)
 }
 
 // SIGNAL 8
-void MainWindow::set_film_actors(const QList<QString> & _t1)
+void MainWindow::set_film_actors(const QStringList & _t1)
 {
     void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 8, _a);
