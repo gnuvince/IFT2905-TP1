@@ -72,7 +72,7 @@ void MainWindow::field_dispatcher(const QMap<QString, QStringList> &film, const 
     emit set_film_country(get_field("countries", film));
     emit set_film_year(get_field("year", film));
     emit set_film_runtime(get_field("runtimes", film) + trUtf8(" minutes"));
-    emit set_film_plot(get_field("plot", film));
+    emit set_film_plot(get_field("plot outline", film));
     emit set_film_director(get_field("director", film));
     emit set_film_genres(film.value("genres", QStringList()).join(QString(", ")));
     emit set_film_actors(film.value("cast", QStringList()));

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Thu Feb 10 16:41:16 2011
+** Created: Tue Feb 15 09:30:06 2011
 **      by: Qt User Interface Compiler version 4.7.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -43,19 +43,19 @@ public:
     QFrame *line;
     QVBoxLayout *verticalLayout_3;
     QHBoxLayout *horizontalLayout_2;
+    QLabel *film_cover;
     QVBoxLayout *verticalLayout_2;
     QLabel *film_title;
     QVBoxLayout *verticalLayout_6;
     QLabel *film_rating;
     QLabel *film_rank;
     QSpacerItem *horizontalSpacer;
-    QLabel *film_cover;
     QPlainTextEdit *film_plot;
     QVBoxLayout *verticalLayout_4;
     QLabel *label_2;
     QSplitter *splitter_2;
     QListWidget *film_actors;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QFormLayout *formLayout;
     QLabel *label_3;
     QLabel *film_director;
@@ -121,6 +121,17 @@ public:
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setSpacing(6);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        film_cover = new QLabel(centralWidget);
+        film_cover->setObjectName(QString::fromUtf8("film_cover"));
+        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(96);
+        sizePolicy1.setHeightForWidth(film_cover->sizePolicy().hasHeightForWidth());
+        film_cover->setSizePolicy(sizePolicy1);
+        film_cover->setMinimumSize(QSize(0, 96));
+
+        horizontalLayout_2->addWidget(film_cover);
+
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setSpacing(6);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
@@ -155,17 +166,6 @@ public:
 
         horizontalLayout_2->addItem(horizontalSpacer);
 
-        film_cover = new QLabel(centralWidget);
-        film_cover->setObjectName(QString::fromUtf8("film_cover"));
-        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Fixed);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(96);
-        sizePolicy1.setHeightForWidth(film_cover->sizePolicy().hasHeightForWidth());
-        film_cover->setSizePolicy(sizePolicy1);
-        film_cover->setMinimumSize(QSize(0, 96));
-
-        horizontalLayout_2->addWidget(film_cover);
-
 
         verticalLayout_3->addLayout(horizontalLayout_2);
 
@@ -191,64 +191,64 @@ public:
         film_actors = new QListWidget(splitter_2);
         film_actors->setObjectName(QString::fromUtf8("film_actors"));
         splitter_2->addWidget(film_actors);
-        widget = new QWidget(splitter_2);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        formLayout = new QFormLayout(widget);
+        layoutWidget = new QWidget(splitter_2);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        formLayout = new QFormLayout(layoutWidget);
         formLayout->setSpacing(6);
         formLayout->setContentsMargins(11, 11, 11, 11);
         formLayout->setObjectName(QString::fromUtf8("formLayout"));
         formLayout->setContentsMargins(0, 0, 0, 0);
-        label_3 = new QLabel(widget);
+        label_3 = new QLabel(layoutWidget);
         label_3->setObjectName(QString::fromUtf8("label_3"));
 
         formLayout->setWidget(0, QFormLayout::LabelRole, label_3);
 
-        film_director = new QLabel(widget);
+        film_director = new QLabel(layoutWidget);
         film_director->setObjectName(QString::fromUtf8("film_director"));
 
         formLayout->setWidget(0, QFormLayout::FieldRole, film_director);
 
-        label_4 = new QLabel(widget);
+        label_4 = new QLabel(layoutWidget);
         label_4->setObjectName(QString::fromUtf8("label_4"));
 
         formLayout->setWidget(2, QFormLayout::LabelRole, label_4);
 
-        film_country = new QLabel(widget);
+        film_country = new QLabel(layoutWidget);
         film_country->setObjectName(QString::fromUtf8("film_country"));
 
         formLayout->setWidget(2, QFormLayout::FieldRole, film_country);
 
-        label_5 = new QLabel(widget);
+        label_5 = new QLabel(layoutWidget);
         label_5->setObjectName(QString::fromUtf8("label_5"));
 
         formLayout->setWidget(3, QFormLayout::LabelRole, label_5);
 
-        film_runtime = new QLabel(widget);
+        film_runtime = new QLabel(layoutWidget);
         film_runtime->setObjectName(QString::fromUtf8("film_runtime"));
 
         formLayout->setWidget(3, QFormLayout::FieldRole, film_runtime);
 
-        label_6 = new QLabel(widget);
+        label_6 = new QLabel(layoutWidget);
         label_6->setObjectName(QString::fromUtf8("label_6"));
 
         formLayout->setWidget(4, QFormLayout::LabelRole, label_6);
 
-        film_genres = new QLabel(widget);
+        film_genres = new QLabel(layoutWidget);
         film_genres->setObjectName(QString::fromUtf8("film_genres"));
 
         formLayout->setWidget(4, QFormLayout::FieldRole, film_genres);
 
-        label_7 = new QLabel(widget);
+        label_7 = new QLabel(layoutWidget);
         label_7->setObjectName(QString::fromUtf8("label_7"));
 
         formLayout->setWidget(1, QFormLayout::LabelRole, label_7);
 
-        film_year = new QLabel(widget);
+        film_year = new QLabel(layoutWidget);
         film_year->setObjectName(QString::fromUtf8("film_year"));
 
         formLayout->setWidget(1, QFormLayout::FieldRole, film_year);
 
-        splitter_2->addWidget(widget);
+        splitter_2->addWidget(layoutWidget);
 
         verticalLayout_4->addWidget(splitter_2);
 
@@ -275,10 +275,10 @@ public:
         search_button->setToolTip(QApplication::translate("MainWindow", "Chercher le film", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP
         search_button->setText(QApplication::translate("MainWindow", "&Chercher", 0, QApplication::UnicodeUTF8));
-        film_title->setText(QString());
-        film_rating->setText(QString());
-        film_rank->setText(QString());
-        film_cover->setText(QString());
+        film_cover->setText(QApplication::translate("MainWindow", "cover", 0, QApplication::UnicodeUTF8));
+        film_title->setText(QApplication::translate("MainWindow", "title", 0, QApplication::UnicodeUTF8));
+        film_rating->setText(QApplication::translate("MainWindow", "rating", 0, QApplication::UnicodeUTF8));
+        film_rank->setText(QApplication::translate("MainWindow", "rank", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("MainWindow", "Distribution", 0, QApplication::UnicodeUTF8));
         label_3->setText(QApplication::translate("MainWindow", "R\303\251alisteur:", 0, QApplication::UnicodeUTF8));
         film_director->setText(QString());

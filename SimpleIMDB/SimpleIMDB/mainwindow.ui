@@ -73,6 +73,25 @@
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_2">
         <item>
+         <widget class="QLabel" name="film_cover">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>96</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>96</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>cover</string>
+          </property>
+         </widget>
+        </item>
+        <item>
          <layout class="QVBoxLayout" name="verticalLayout_2">
           <item>
            <widget class="QLabel" name="film_title">
@@ -82,7 +101,7 @@
              </font>
             </property>
             <property name="text">
-             <string/>
+             <string>title</string>
             </property>
            </widget>
           </item>
@@ -91,14 +110,14 @@
             <item>
              <widget class="QLabel" name="film_rating">
               <property name="text">
-               <string/>
+               <string>rating</string>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QLabel" name="film_rank">
               <property name="text">
-               <string/>
+               <string>rank</string>
               </property>
              </widget>
             </item>
@@ -118,25 +137,6 @@
            </size>
           </property>
          </spacer>
-        </item>
-        <item>
-         <widget class="QLabel" name="film_cover">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>96</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>96</height>
-           </size>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-         </widget>
         </item>
        </layout>
       </item>
@@ -160,7 +160,7 @@
          <enum>Qt::Horizontal</enum>
         </property>
         <widget class="QListWidget" name="film_actors"/>
-        <widget class="QWidget" name="">
+        <widget class="QWidget" name="layoutWidget">
          <layout class="QFormLayout" name="formLayout">
           <item row="0" column="0">
            <widget class="QLabel" name="label_3">
