@@ -87,7 +87,7 @@
            </size>
           </property>
           <property name="text">
-           <string>cover</string>
+           <string/>
           </property>
          </widget>
         </item>
@@ -101,7 +101,7 @@
              </font>
             </property>
             <property name="text">
-             <string>title</string>
+             <string/>
             </property>
            </widget>
           </item>
@@ -110,14 +110,14 @@
             <item>
              <widget class="QLabel" name="film_rating">
               <property name="text">
-               <string>rating</string>
+               <string/>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QLabel" name="film_rank">
               <property name="text">
-               <string>rank</string>
+               <string/>
               </property>
              </widget>
             </item>

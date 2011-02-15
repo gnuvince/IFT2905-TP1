@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Tue Feb 15 09:30:06 2011
+** Created: Tue Feb 15 09:48:34 2011
 **      by: Qt User Interface Compiler version 4.7.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -275,10 +275,10 @@ public:
         search_button->setToolTip(QApplication::translate("MainWindow", "Chercher le film", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP
         search_button->setText(QApplication::translate("MainWindow", "&Chercher", 0, QApplication::UnicodeUTF8));
-        film_cover->setText(QApplication::translate("MainWindow", "cover", 0, QApplication::UnicodeUTF8));
-        film_title->setText(QApplication::translate("MainWindow", "title", 0, QApplication::UnicodeUTF8));
-        film_rating->setText(QApplication::translate("MainWindow", "rating", 0, QApplication::UnicodeUTF8));
-        film_rank->setText(QApplication::translate("MainWindow", "rank", 0, QApplication::UnicodeUTF8));
+        film_cover->setText(QString());
+        film_title->setText(QString());
+        film_rating->setText(QString());
+        film_rank->setText(QString());
         label_2->setText(QApplication::translate("MainWindow", "Distribution", 0, QApplication::UnicodeUTF8));
         label_3->setText(QApplication::translate("MainWindow", "R\303\251alisteur:", 0, QApplication::UnicodeUTF8));
         film_director->setText(QString());
