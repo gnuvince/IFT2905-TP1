@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>830</width>
+    <height>502</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>0</y>
+      <width>741</width>
+      <height>451</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>3</number>
+    </property>
+    <widget class="QWidget" name="tab_general">
+     <attribute name="title">
+      <string>Général</string>
+     </attribute>
+     <widget class="QLabel" name="film_cover">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>71</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>cover</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_title">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>10</y>
+        <width>231</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>title</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_rating">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>60</y>
+        <width>59</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>rating</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_rank">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>60</y>
+        <width>59</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>rank</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_plot">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>150</y>
+        <width>59</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>plot</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_year">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>120</y>
+        <width>59</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>year</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_certificates">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>120</y>
+        <width>81</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>certificate</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_runtime">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>160</y>
+        <width>59</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>runtime</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_language">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>200</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>language</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_votes">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>60</y>
+        <width>59</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>votes</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_mpaa_rating">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>120</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>mpaa_rating</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_genres">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>60</y>
+        <width>59</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>genres</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_aspect_ratio">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>210</y>
+        <width>81</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>aspectRatio</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_kind">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>250</y>
+        <width>59</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Type</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_writer">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>250</y>
+        <width>59</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Auteur</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_directors">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>290</y>
+        <width>111</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Réalisateurs</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_original_music">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>300</y>
+        <width>121</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Musique originale</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_sound_mix">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>300</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>sound_mix?</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_distribution">
+     <attribute name="title">
+      <string>Distribution</string>
+     </attribute>
+     <widget class="QLabel" name="film_cast">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>20</y>
+        <width>59</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Acteurs</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_casting_director">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>10</y>
+        <width>221</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Directeur(s) de distribution</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_stunt_performer">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>10</y>
+        <width>81</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Cascadeurs</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_production">
+     <attribute name="title">
+      <string>Production</string>
+     </attribute>
+     <widget class="QLabel" name="film_country">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>10</y>
+        <width>59</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Pays</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_distributors">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>10</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Distributeurs</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_art_director">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>150</y>
+        <width>141</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Direction artistique</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_cinematographer">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>230</y>
+        <width>121</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Cinématographe</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_production_companies">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>90</y>
+        <width>161</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Société de production</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_editor">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>50</y>
+        <width>59</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Éditeur</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_production_manager">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>90</y>
+        <width>161</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Gestion de la production</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_production_assistant">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>130</y>
+        <width>181</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Assistants à la production</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_makeup">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>30</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Maquillages</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_producer">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>250</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Producteurs</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_production_design">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>210</y>
+        <width>201</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Conception de la production</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_technical">
+     <attribute name="title">
+      <string>Équipes techniques</string>
+     </attribute>
+     <widget class="QLabel" name="film_music_department">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>30</y>
+        <width>121</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Équipe musicale</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_sound_crew">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>110</y>
+        <width>121</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Équipe de sons</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_visual_effects">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>180</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Effets visuels</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_sfx_companies">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>190</y>
+        <width>191</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Sociétés des effets spéciaux</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_set_decoration">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>260</y>
+        <width>121</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Équipe des décors</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_costume_department">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>270</y>
+        <width>141</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Équipe des costumes</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_sfx_department">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>230</y>
+        <width>181</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Équipe des effets spéciaux</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_art_department">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>150</y>
+        <width>141</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Équipe artistique</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_camera_electricity">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>50</y>
+        <width>161</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Caméras et électricité</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>310</y>
+        <width>131</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Équipe d'animation</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_misc">
+     <attribute name="title">
+      <string>Divers</string>
+     </attribute>
+     <widget class="QLabel" name="film_international_titles">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>60</y>
+        <width>141</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Titres internationaux</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_transportation">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>50</y>
+        <width>111</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Transport</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_misc_companies">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>210</y>
+        <width>141</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Compagnies diverses</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="film_misc_crew">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>140</y>
+        <width>111</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Équipe diverse</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_fullcover">
+     <attribute name="title">
+      <string>Image</string>
+     </attribute>
+     <widget class="QLabel" name="film_fullsize_cover">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>20</y>
+        <width>331</width>
+        <height>401</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>fullSizeCover</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>830</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
