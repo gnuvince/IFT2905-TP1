@@ -127,9 +127,9 @@ void MainWindow::search_film() {
     imdb->changeFilmInternet(ui->search_field->text());
 }
 
-void setItems(const QListWidget &widget, const QStringList &list) {
+void setItems(QListWidget *widget, const QStringList &list) {
     widget->clear();
-    widget.addItems(list);
+    widget->addItems(list);
 }
 
 

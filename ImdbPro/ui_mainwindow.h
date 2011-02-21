@@ -1,8 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Sun Feb 20 13:46:56 2011
-**      by: Qt User Interface Compiler version 4.7.1
+** Created: Mon Feb 21 14:45:51 2011
+**      by: Qt User Interface Compiler version 4.7.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -34,15 +34,14 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralWidget;
-    QVBoxLayout *verticalLayout_5;
+    QVBoxLayout *verticalLayout_6;
     QHBoxLayout *horizontalLayout_4;
     QLabel *label_2;
     QLineEdit *search_field;
     QPushButton *search_button;
     QTabWidget *tabWidget;
     QWidget *tab_general;
-    QHBoxLayout *horizontalLayout_3;
-    QVBoxLayout *verticalLayout_13;
+    QVBoxLayout *verticalLayout_8;
     QHBoxLayout *horizontalLayout_5;
     QVBoxLayout *verticalLayout_4;
     QLabel *film_cover;
@@ -80,7 +79,6 @@ public:
     QLabel *film_aspect_ratio;
     QLabel *label_14;
     QLabel *film_year;
-    QSpacerItem *horizontalSpacer_2;
     QFormLayout *formLayout_2;
     QLabel *label_11;
     QLabel *film_mpaa_rating;
@@ -91,8 +89,7 @@ public:
     QLabel *label_15;
     QListWidget *film_akas;
     QWidget *tab_distribution;
-    QVBoxLayout *verticalLayout_6;
-    QFormLayout *formLayout_3;
+    QFormLayout *formLayout_4;
     QLabel *film_casting_director_lbl;
     QLabel *film_casting_director;
     QLabel *film_cast_lbl;
@@ -100,16 +97,24 @@ public:
     QLabel *film_stunt_performer_lbl;
     QListWidget *film_stunt_performers;
     QWidget *tab_production;
-    QLabel *film_distributors;
-    QLabel *film_art_director;
-    QLabel *film_cinematographer;
-    QLabel *film_production_companies;
+    QVBoxLayout *verticalLayout_9;
+    QHBoxLayout *horizontalLayout_6;
+    QFormLayout *formLayout_6;
+    QLabel *film_producer_lbl;
+    QListWidget *film_producer;
+    QLabel *film_production_companies_lbl;
+    QListWidget *film_production_companies;
+    QLabel *film_distributors_lbl;
+    QListWidget *film_distributors;
+    QFormLayout *formLayout_5;
+    QLabel *film_editor_lbl;
     QLabel *film_editor;
-    QLabel *film_production_manager;
-    QLabel *film_production_assistant;
-    QLabel *film_makeup;
-    QLabel *film_producer;
-    QLabel *film_production_design;
+    QLabel *film_cinematographer_lbl;
+    QLabel *film_cinematographer;
+    QLabel *film_art_director_lbl;
+    QListWidget *film_art_director;
+    QLabel *film_makeup_lbl;
+    QListWidget *film_makeup;
     QWidget *tab_technical;
     QLabel *film_music_department;
     QLabel *film_sound_crew;
@@ -122,8 +127,8 @@ public:
     QLabel *film_camera_electricity;
     QLabel *label;
     QWidget *tab_misc;
-    QVBoxLayout *verticalLayout_8;
-    QFormLayout *formLayout_4;
+    QVBoxLayout *verticalLayout_5;
+    QFormLayout *formLayout_3;
     QLabel *film_transportation_lbl;
     QListWidget *film_transportation;
     QLabel *film_misc_crew_lbl;
@@ -138,13 +143,13 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(619, 457);
+        MainWindow->resize(755, 457);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
-        verticalLayout_5 = new QVBoxLayout(centralWidget);
-        verticalLayout_5->setSpacing(6);
-        verticalLayout_5->setContentsMargins(11, 11, 11, 11);
-        verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
+        verticalLayout_6 = new QVBoxLayout(centralWidget);
+        verticalLayout_6->setSpacing(6);
+        verticalLayout_6->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_6->setObjectName(QString::fromUtf8("verticalLayout_6"));
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setSpacing(6);
         horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
@@ -165,20 +170,22 @@ public:
         horizontalLayout_4->addWidget(search_button);
 
 
-        verticalLayout_5->addLayout(horizontalLayout_4);
+        verticalLayout_6->addLayout(horizontalLayout_4);
 
         tabWidget = new QTabWidget(centralWidget);
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
         tabWidget->setMaximumSize(QSize(16777215, 401));
         tab_general = new QWidget();
         tab_general->setObjectName(QString::fromUtf8("tab_general"));
-        horizontalLayout_3 = new QHBoxLayout(tab_general);
-        horizontalLayout_3->setSpacing(6);
-        horizontalLayout_3->setContentsMargins(11, 11, 11, 11);
-        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
-        verticalLayout_13 = new QVBoxLayout();
-        verticalLayout_13->setSpacing(6);
-        verticalLayout_13->setObjectName(QString::fromUtf8("verticalLayout_13"));
+        QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(tab_general->sizePolicy().hasHeightForWidth());
+        tab_general->setSizePolicy(sizePolicy);
+        verticalLayout_8 = new QVBoxLayout(tab_general);
+        verticalLayout_8->setSpacing(6);
+        verticalLayout_8->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_8->setObjectName(QString::fromUtf8("verticalLayout_8"));
         horizontalLayout_5 = new QHBoxLayout();
         horizontalLayout_5->setSpacing(6);
         horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
@@ -268,7 +275,7 @@ public:
         horizontalLayout_5->addLayout(verticalLayout_3);
 
 
-        verticalLayout_13->addLayout(horizontalLayout_5);
+        verticalLayout_8->addLayout(horizontalLayout_5);
 
         horizontalLayout_9 = new QHBoxLayout();
         horizontalLayout_9->setSpacing(6);
@@ -373,10 +380,6 @@ public:
 
         horizontalLayout_9->addLayout(formLayout);
 
-        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_9->addItem(horizontalSpacer_2);
-
         formLayout_2 = new QFormLayout();
         formLayout_2->setSpacing(6);
         formLayout_2->setObjectName(QString::fromUtf8("formLayout_2"));
@@ -427,89 +430,141 @@ public:
         horizontalLayout_9->addLayout(formLayout_2);
 
 
-        verticalLayout_13->addLayout(horizontalLayout_9);
-
-
-        horizontalLayout_3->addLayout(verticalLayout_13);
+        verticalLayout_8->addLayout(horizontalLayout_9);
 
         tabWidget->addTab(tab_general, QString());
         tab_distribution = new QWidget();
         tab_distribution->setObjectName(QString::fromUtf8("tab_distribution"));
-        verticalLayout_6 = new QVBoxLayout(tab_distribution);
-        verticalLayout_6->setSpacing(6);
-        verticalLayout_6->setContentsMargins(11, 11, 11, 11);
-        verticalLayout_6->setObjectName(QString::fromUtf8("verticalLayout_6"));
-        formLayout_3 = new QFormLayout();
-        formLayout_3->setSpacing(6);
-        formLayout_3->setObjectName(QString::fromUtf8("formLayout_3"));
-        formLayout_3->setFieldGrowthPolicy(QFormLayout::ExpandingFieldsGrow);
-        formLayout_3->setLabelAlignment(Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing);
+        formLayout_4 = new QFormLayout(tab_distribution);
+        formLayout_4->setSpacing(6);
+        formLayout_4->setContentsMargins(11, 11, 11, 11);
+        formLayout_4->setObjectName(QString::fromUtf8("formLayout_4"));
         film_casting_director_lbl = new QLabel(tab_distribution);
         film_casting_director_lbl->setObjectName(QString::fromUtf8("film_casting_director_lbl"));
 
-        formLayout_3->setWidget(0, QFormLayout::LabelRole, film_casting_director_lbl);
+        formLayout_4->setWidget(0, QFormLayout::LabelRole, film_casting_director_lbl);
 
         film_casting_director = new QLabel(tab_distribution);
         film_casting_director->setObjectName(QString::fromUtf8("film_casting_director"));
 
-        formLayout_3->setWidget(0, QFormLayout::FieldRole, film_casting_director);
+        formLayout_4->setWidget(0, QFormLayout::FieldRole, film_casting_director);
 
         film_cast_lbl = new QLabel(tab_distribution);
         film_cast_lbl->setObjectName(QString::fromUtf8("film_cast_lbl"));
 
-        formLayout_3->setWidget(1, QFormLayout::LabelRole, film_cast_lbl);
+        formLayout_4->setWidget(1, QFormLayout::LabelRole, film_cast_lbl);
 
         film_cast = new QListWidget(tab_distribution);
         film_cast->setObjectName(QString::fromUtf8("film_cast"));
 
-        formLayout_3->setWidget(1, QFormLayout::FieldRole, film_cast);
+        formLayout_4->setWidget(1, QFormLayout::FieldRole, film_cast);
 
         film_stunt_performer_lbl = new QLabel(tab_distribution);
         film_stunt_performer_lbl->setObjectName(QString::fromUtf8("film_stunt_performer_lbl"));
 
-        formLayout_3->setWidget(2, QFormLayout::LabelRole, film_stunt_performer_lbl);
+        formLayout_4->setWidget(2, QFormLayout::LabelRole, film_stunt_performer_lbl);
 
         film_stunt_performers = new QListWidget(tab_distribution);
         film_stunt_performers->setObjectName(QString::fromUtf8("film_stunt_performers"));
 
-        formLayout_3->setWidget(2, QFormLayout::FieldRole, film_stunt_performers);
-
-
-        verticalLayout_6->addLayout(formLayout_3);
+        formLayout_4->setWidget(2, QFormLayout::FieldRole, film_stunt_performers);
 
         tabWidget->addTab(tab_distribution, QString());
         tab_production = new QWidget();
         tab_production->setObjectName(QString::fromUtf8("tab_production"));
-        film_distributors = new QLabel(tab_production);
-        film_distributors->setObjectName(QString::fromUtf8("film_distributors"));
-        film_distributors->setGeometry(QRect(350, 10, 91, 16));
-        film_art_director = new QLabel(tab_production);
-        film_art_director->setObjectName(QString::fromUtf8("film_art_director"));
-        film_art_director->setGeometry(QRect(390, 150, 141, 16));
-        film_cinematographer = new QLabel(tab_production);
-        film_cinematographer->setObjectName(QString::fromUtf8("film_cinematographer"));
-        film_cinematographer->setGeometry(QRect(90, 230, 121, 16));
-        film_production_companies = new QLabel(tab_production);
+        verticalLayout_9 = new QVBoxLayout(tab_production);
+        verticalLayout_9->setSpacing(6);
+        verticalLayout_9->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_9->setObjectName(QString::fromUtf8("verticalLayout_9"));
+        horizontalLayout_6 = new QHBoxLayout();
+        horizontalLayout_6->setSpacing(6);
+        horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
+        formLayout_6 = new QFormLayout();
+        formLayout_6->setSpacing(6);
+        formLayout_6->setObjectName(QString::fromUtf8("formLayout_6"));
+        formLayout_6->setFieldGrowthPolicy(QFormLayout::ExpandingFieldsGrow);
+        film_producer_lbl = new QLabel(tab_production);
+        film_producer_lbl->setObjectName(QString::fromUtf8("film_producer_lbl"));
+
+        formLayout_6->setWidget(0, QFormLayout::LabelRole, film_producer_lbl);
+
+        film_producer = new QListWidget(tab_production);
+        film_producer->setObjectName(QString::fromUtf8("film_producer"));
+
+        formLayout_6->setWidget(0, QFormLayout::FieldRole, film_producer);
+
+        film_production_companies_lbl = new QLabel(tab_production);
+        film_production_companies_lbl->setObjectName(QString::fromUtf8("film_production_companies_lbl"));
+
+        formLayout_6->setWidget(1, QFormLayout::LabelRole, film_production_companies_lbl);
+
+        film_production_companies = new QListWidget(tab_production);
         film_production_companies->setObjectName(QString::fromUtf8("film_production_companies"));
-        film_production_companies->setGeometry(QRect(330, 100, 161, 16));
+
+        formLayout_6->setWidget(1, QFormLayout::FieldRole, film_production_companies);
+
+        film_distributors_lbl = new QLabel(tab_production);
+        film_distributors_lbl->setObjectName(QString::fromUtf8("film_distributors_lbl"));
+
+        formLayout_6->setWidget(2, QFormLayout::LabelRole, film_distributors_lbl);
+
+        film_distributors = new QListWidget(tab_production);
+        film_distributors->setObjectName(QString::fromUtf8("film_distributors"));
+
+        formLayout_6->setWidget(2, QFormLayout::FieldRole, film_distributors);
+
+
+        horizontalLayout_6->addLayout(formLayout_6);
+
+        formLayout_5 = new QFormLayout();
+        formLayout_5->setSpacing(6);
+        formLayout_5->setObjectName(QString::fromUtf8("formLayout_5"));
+        film_editor_lbl = new QLabel(tab_production);
+        film_editor_lbl->setObjectName(QString::fromUtf8("film_editor_lbl"));
+
+        formLayout_5->setWidget(0, QFormLayout::LabelRole, film_editor_lbl);
+
         film_editor = new QLabel(tab_production);
         film_editor->setObjectName(QString::fromUtf8("film_editor"));
-        film_editor->setGeometry(QRect(340, 60, 59, 15));
-        film_production_manager = new QLabel(tab_production);
-        film_production_manager->setObjectName(QString::fromUtf8("film_production_manager"));
-        film_production_manager->setGeometry(QRect(80, 90, 161, 16));
-        film_production_assistant = new QLabel(tab_production);
-        film_production_assistant->setObjectName(QString::fromUtf8("film_production_assistant"));
-        film_production_assistant->setGeometry(QRect(80, 130, 181, 16));
-        film_makeup = new QLabel(tab_production);
+
+        formLayout_5->setWidget(0, QFormLayout::FieldRole, film_editor);
+
+        film_cinematographer_lbl = new QLabel(tab_production);
+        film_cinematographer_lbl->setObjectName(QString::fromUtf8("film_cinematographer_lbl"));
+
+        formLayout_5->setWidget(1, QFormLayout::LabelRole, film_cinematographer_lbl);
+
+        film_cinematographer = new QLabel(tab_production);
+        film_cinematographer->setObjectName(QString::fromUtf8("film_cinematographer"));
+
+        formLayout_5->setWidget(1, QFormLayout::FieldRole, film_cinematographer);
+
+        film_art_director_lbl = new QLabel(tab_production);
+        film_art_director_lbl->setObjectName(QString::fromUtf8("film_art_director_lbl"));
+
+        formLayout_5->setWidget(3, QFormLayout::LabelRole, film_art_director_lbl);
+
+        film_art_director = new QListWidget(tab_production);
+        film_art_director->setObjectName(QString::fromUtf8("film_art_director"));
+
+        formLayout_5->setWidget(3, QFormLayout::FieldRole, film_art_director);
+
+        film_makeup_lbl = new QLabel(tab_production);
+        film_makeup_lbl->setObjectName(QString::fromUtf8("film_makeup_lbl"));
+
+        formLayout_5->setWidget(4, QFormLayout::LabelRole, film_makeup_lbl);
+
+        film_makeup = new QListWidget(tab_production);
         film_makeup->setObjectName(QString::fromUtf8("film_makeup"));
-        film_makeup->setGeometry(QRect(600, 30, 91, 16));
-        film_producer = new QLabel(tab_production);
-        film_producer->setObjectName(QString::fromUtf8("film_producer"));
-        film_producer->setGeometry(QRect(350, 250, 91, 16));
-        film_production_design = new QLabel(tab_production);
-        film_production_design->setObjectName(QString::fromUtf8("film_production_design"));
-        film_production_design->setGeometry(QRect(280, 190, 201, 16));
+
+        formLayout_5->setWidget(4, QFormLayout::FieldRole, film_makeup);
+
+
+        horizontalLayout_6->addLayout(formLayout_5);
+
+
+        verticalLayout_9->addLayout(horizontalLayout_6);
+
         tabWidget->addTab(tab_production, QString());
         tab_technical = new QWidget();
         tab_technical->setObjectName(QString::fromUtf8("tab_technical"));
@@ -546,46 +601,46 @@ public:
         tabWidget->addTab(tab_technical, QString());
         tab_misc = new QWidget();
         tab_misc->setObjectName(QString::fromUtf8("tab_misc"));
-        verticalLayout_8 = new QVBoxLayout(tab_misc);
-        verticalLayout_8->setSpacing(6);
-        verticalLayout_8->setContentsMargins(11, 11, 11, 11);
-        verticalLayout_8->setObjectName(QString::fromUtf8("verticalLayout_8"));
-        formLayout_4 = new QFormLayout();
-        formLayout_4->setSpacing(6);
-        formLayout_4->setObjectName(QString::fromUtf8("formLayout_4"));
-        formLayout_4->setFieldGrowthPolicy(QFormLayout::ExpandingFieldsGrow);
+        verticalLayout_5 = new QVBoxLayout(tab_misc);
+        verticalLayout_5->setSpacing(6);
+        verticalLayout_5->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
+        formLayout_3 = new QFormLayout();
+        formLayout_3->setSpacing(6);
+        formLayout_3->setObjectName(QString::fromUtf8("formLayout_3"));
+        formLayout_3->setFieldGrowthPolicy(QFormLayout::ExpandingFieldsGrow);
         film_transportation_lbl = new QLabel(tab_misc);
         film_transportation_lbl->setObjectName(QString::fromUtf8("film_transportation_lbl"));
 
-        formLayout_4->setWidget(0, QFormLayout::LabelRole, film_transportation_lbl);
+        formLayout_3->setWidget(0, QFormLayout::LabelRole, film_transportation_lbl);
 
         film_transportation = new QListWidget(tab_misc);
         film_transportation->setObjectName(QString::fromUtf8("film_transportation"));
 
-        formLayout_4->setWidget(0, QFormLayout::FieldRole, film_transportation);
+        formLayout_3->setWidget(0, QFormLayout::FieldRole, film_transportation);
 
         film_misc_crew_lbl = new QLabel(tab_misc);
         film_misc_crew_lbl->setObjectName(QString::fromUtf8("film_misc_crew_lbl"));
 
-        formLayout_4->setWidget(1, QFormLayout::LabelRole, film_misc_crew_lbl);
+        formLayout_3->setWidget(1, QFormLayout::LabelRole, film_misc_crew_lbl);
 
         film_misc_crew = new QListWidget(tab_misc);
         film_misc_crew->setObjectName(QString::fromUtf8("film_misc_crew"));
 
-        formLayout_4->setWidget(1, QFormLayout::FieldRole, film_misc_crew);
+        formLayout_3->setWidget(1, QFormLayout::FieldRole, film_misc_crew);
 
         film_misc_companies_lbl = new QLabel(tab_misc);
         film_misc_companies_lbl->setObjectName(QString::fromUtf8("film_misc_companies_lbl"));
 
-        formLayout_4->setWidget(2, QFormLayout::LabelRole, film_misc_companies_lbl);
+        formLayout_3->setWidget(2, QFormLayout::LabelRole, film_misc_companies_lbl);
 
         film_misc_companies = new QListWidget(tab_misc);
         film_misc_companies->setObjectName(QString::fromUtf8("film_misc_companies"));
 
-        formLayout_4->setWidget(2, QFormLayout::FieldRole, film_misc_companies);
+        formLayout_3->setWidget(2, QFormLayout::FieldRole, film_misc_companies);
 
 
-        verticalLayout_8->addLayout(formLayout_4);
+        verticalLayout_5->addLayout(formLayout_3);
 
         tabWidget->addTab(tab_misc, QString());
         tab_fullcover = new QWidget();
@@ -602,13 +657,13 @@ public:
 
         tabWidget->addTab(tab_fullcover, QString());
 
-        verticalLayout_5->addWidget(tabWidget);
+        verticalLayout_6->addWidget(tabWidget);
 
         MainWindow->setCentralWidget(centralWidget);
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -653,16 +708,15 @@ public:
         film_cast_lbl->setText(QApplication::translate("MainWindow", "Acteurs", 0, QApplication::UnicodeUTF8));
         film_stunt_performer_lbl->setText(QApplication::translate("MainWindow", "Cascadeurs", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab_distribution), QApplication::translate("MainWindow", "Distribution", 0, QApplication::UnicodeUTF8));
-        film_distributors->setText(QApplication::translate("MainWindow", "Distributeurs", 0, QApplication::UnicodeUTF8));
-        film_art_director->setText(QApplication::translate("MainWindow", "Direction artistique", 0, QApplication::UnicodeUTF8));
-        film_cinematographer->setText(QApplication::translate("MainWindow", "Cin\303\251matographe", 0, QApplication::UnicodeUTF8));
-        film_production_companies->setText(QApplication::translate("MainWindow", "Soci\303\251t\303\251 de production", 0, QApplication::UnicodeUTF8));
-        film_editor->setText(QApplication::translate("MainWindow", "\303\211diteur", 0, QApplication::UnicodeUTF8));
-        film_production_manager->setText(QApplication::translate("MainWindow", "Gestion de la production", 0, QApplication::UnicodeUTF8));
-        film_production_assistant->setText(QApplication::translate("MainWindow", "Assistants \303\240 la production", 0, QApplication::UnicodeUTF8));
-        film_makeup->setText(QApplication::translate("MainWindow", "Maquillages", 0, QApplication::UnicodeUTF8));
-        film_producer->setText(QApplication::translate("MainWindow", "Producteurs", 0, QApplication::UnicodeUTF8));
-        film_production_design->setText(QApplication::translate("MainWindow", "Conception de la production", 0, QApplication::UnicodeUTF8));
+        film_producer_lbl->setText(QApplication::translate("MainWindow", "Producteurs", 0, QApplication::UnicodeUTF8));
+        film_production_companies_lbl->setText(QApplication::translate("MainWindow", "Soci\303\251t\303\251 de production", 0, QApplication::UnicodeUTF8));
+        film_distributors_lbl->setText(QApplication::translate("MainWindow", "Distributeurs", 0, QApplication::UnicodeUTF8));
+        film_editor_lbl->setText(QApplication::translate("MainWindow", "\303\211diteur", 0, QApplication::UnicodeUTF8));
+        film_editor->setText(QApplication::translate("MainWindow", "TextLabel", 0, QApplication::UnicodeUTF8));
+        film_cinematographer_lbl->setText(QApplication::translate("MainWindow", "Cin\303\251matographe", 0, QApplication::UnicodeUTF8));
+        film_cinematographer->setText(QApplication::translate("MainWindow", "TextLabel", 0, QApplication::UnicodeUTF8));
+        film_art_director_lbl->setText(QApplication::translate("MainWindow", "Direction artistique", 0, QApplication::UnicodeUTF8));
+        film_makeup_lbl->setText(QApplication::translate("MainWindow", "Maquillages", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab_production), QApplication::translate("MainWindow", "Production", 0, QApplication::UnicodeUTF8));
         film_music_department->setText(QApplication::translate("MainWindow", "\303\211quipe musicale", 0, QApplication::UnicodeUTF8));
         film_sound_crew->setText(QApplication::translate("MainWindow", "\303\211quipe de sons", 0, QApplication::UnicodeUTF8));

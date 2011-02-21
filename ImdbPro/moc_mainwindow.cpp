@@ -1,8 +1,8 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mainwindow.h'
 **
-** Created: Sun Feb 20 12:07:51 2011
-**      by: The Qt Meta Object Compiler version 62 (Qt 4.7.1)
+** Created: Mon Feb 21 14:51:50 2011
+**      by: The Qt Meta Object Compiler version 62 (Qt 4.7.0)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -11,7 +11,7 @@
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'mainwindow.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 62
-#error "This file was generated using the moc from 4.7.1. It"
+#error "This file was generated using the moc from 4.7.0. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -23,12 +23,12 @@ static const uint qt_meta_data_MainWindow[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-      35,   14, // methods
+      45,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-      25,       // signalCount
+      30,       // signalCount
 
  // signals: signature, parameters, type, tag, flags
       18,   12,   11,   11, 0x05,
@@ -52,22 +52,32 @@ static const uint qt_meta_data_MainWindow[] = {
      509,  419,   11,   11, 0x05,
      548,   42,   11,   11, 0x05,
      583,  419,   11,   11, 0x05,
-     610,  419,   11,   11, 0x05,
-     647,  419,   11,   11, 0x05,
-     679,  419,   11,   11, 0x05,
-     716,   42,   11,   11, 0x05,
+     615,  419,   11,   11, 0x05,
+     658,  419,   11,   11, 0x05,
+     693,  419,   11,   11, 0x05,
+     729,  419,   11,   11, 0x05,
+     758,  419,   11,   11, 0x05,
+     785,  419,   11,   11, 0x05,
+     822,  419,   11,   11, 0x05,
+     854,  419,   11,   11, 0x05,
+     891,   42,   11,   11, 0x05,
 
  // slots: signature, parameters, type, tag, flags
-     762,  751,   11,   11, 0x0a,
-     806,   11,   11,   11, 0x0a,
-     820,  419,   11,   11, 0x0a,
-     859,  419,   11,   11, 0x0a,
-     890,  419,   11,   11, 0x0a,
-     933,   42,   11,   11, 0x0a,
-     972,  419,   11,   11, 0x0a,
-    1003,  419,   11,   11, 0x0a,
-    1044,  419,   11,   11, 0x0a,
-    1080,  419,   11,   11, 0x0a,
+     937,  926,   11,   11, 0x0a,
+     981,   11,   11,   11, 0x0a,
+     995,  419,   11,   11, 0x0a,
+    1034,  419,   11,   11, 0x0a,
+    1065,  419,   11,   11, 0x0a,
+    1108,   42,   11,   11, 0x0a,
+    1147,  419,   11,   11, 0x0a,
+    1178,  419,   11,   11, 0x0a,
+    1219,  419,   11,   11, 0x0a,
+    1255,  419,   11,   11, 0x0a,
+    1296,  419,   11,   11, 0x0a,
+    1332,  419,   11,   11, 0x0a,
+    1379,  419,   11,   11, 0x0a,
+    1418,  419,   11,   11, 0x0a,
+    1458,  419,   11,   11, 0x0a,
 
        0        // eod
 };
@@ -91,6 +101,11 @@ static const char qt_meta_stringdata_MainWindow[] = {
     "film_set_cast(QStringList)\0"
     "film_set_stunt_performers(QStringList)\0"
     "film_set_casting_director(QString)\0"
+    "film_set_producers(QStringList)\0"
+    "film_set_production_companies(QStringList)\0"
+    "film_set_distributors(QStringList)\0"
+    "film_set_art_direction(QStringList)\0"
+    "film_set_makeup(QStringList)\0"
     "film_set_akas(QStringList)\0"
     "film_set_transportation(QStringList)\0"
     "film_set_misc_crew(QStringList)\0"
@@ -105,6 +120,11 @@ static const char qt_meta_stringdata_MainWindow[] = {
     "display_film_transportation(QStringList)\0"
     "display_film_misc_crew(QStringList)\0"
     "display_film_misc_companies(QStringList)\0"
+    "display_film_producers(QStringList)\0"
+    "display_film_production_companies(QStringList)\0"
+    "display_film_distributors(QStringList)\0"
+    "display_film_art_direction(QStringList)\0"
+    "display_film_makeup(QStringList)\0"
 };
 
 const QMetaObject MainWindow::staticMetaObject = {
@@ -156,24 +176,34 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 17: film_set_cast((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
         case 18: film_set_stunt_performers((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
         case 19: film_set_casting_director((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 20: film_set_akas((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
-        case 21: film_set_transportation((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
-        case 22: film_set_misc_crew((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
-        case 23: film_set_misc_companies((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
-        case 24: film_set_full_sized_cover((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 25: dispatch((*reinterpret_cast< const QMap<QString,QStringList>(*)>(_a[1])),(*reinterpret_cast< const QPixmap(*)>(_a[2]))); break;
-        case 26: search_film(); break;
-        case 27: display_film_certificates((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
-        case 28: display_film_cast((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
-        case 29: display_film_stunt_performers((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
-        case 30: display_film_full_sized_cover((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 31: display_film_akas((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
-        case 32: display_film_transportation((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
-        case 33: display_film_misc_crew((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
-        case 34: display_film_misc_companies((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
+        case 20: film_set_producers((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
+        case 21: film_set_production_companies((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
+        case 22: film_set_distributors((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
+        case 23: film_set_art_direction((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
+        case 24: film_set_makeup((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
+        case 25: film_set_akas((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
+        case 26: film_set_transportation((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
+        case 27: film_set_misc_crew((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
+        case 28: film_set_misc_companies((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
+        case 29: film_set_full_sized_cover((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 30: dispatch((*reinterpret_cast< const QMap<QString,QStringList>(*)>(_a[1])),(*reinterpret_cast< const QPixmap(*)>(_a[2]))); break;
+        case 31: search_film(); break;
+        case 32: display_film_certificates((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
+        case 33: display_film_cast((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
+        case 34: display_film_stunt_performers((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
+        case 35: display_film_full_sized_cover((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 36: display_film_akas((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
+        case 37: display_film_transportation((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
+        case 38: display_film_misc_crew((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
+        case 39: display_film_misc_companies((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
+        case 40: display_film_producers((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
+        case 41: display_film_production_companies((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
+        case 42: display_film_distributors((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
+        case 43: display_film_art_direction((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
+        case 44: display_film_makeup((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
         default: ;
         }
-        _id -= 35;
+        _id -= 45;
     }
     return _id;
 }
@@ -319,37 +349,72 @@ void MainWindow::film_set_casting_director(const QString & _t1)
 }
 
 // SIGNAL 20
-void MainWindow::film_set_akas(const QStringList & _t1)
+void MainWindow::film_set_producers(const QStringList & _t1)
 {
     void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 20, _a);
 }
 
 // SIGNAL 21
-void MainWindow::film_set_transportation(const QStringList & _t1)
+void MainWindow::film_set_production_companies(const QStringList & _t1)
 {
     void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 21, _a);
 }
 
 // SIGNAL 22
-void MainWindow::film_set_misc_crew(const QStringList & _t1)
+void MainWindow::film_set_distributors(const QStringList & _t1)
 {
     void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 22, _a);
 }
 
 // SIGNAL 23
-void MainWindow::film_set_misc_companies(const QStringList & _t1)
+void MainWindow::film_set_art_direction(const QStringList & _t1)
 {
     void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 23, _a);
 }
 
 // SIGNAL 24
-void MainWindow::film_set_full_sized_cover(const QString & _t1)
+void MainWindow::film_set_makeup(const QStringList & _t1)
 {
     void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 24, _a);
+}
+
+// SIGNAL 25
+void MainWindow::film_set_akas(const QStringList & _t1)
+{
+    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    QMetaObject::activate(this, &staticMetaObject, 25, _a);
+}
+
+// SIGNAL 26
+void MainWindow::film_set_transportation(const QStringList & _t1)
+{
+    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    QMetaObject::activate(this, &staticMetaObject, 26, _a);
+}
+
+// SIGNAL 27
+void MainWindow::film_set_misc_crew(const QStringList & _t1)
+{
+    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    QMetaObject::activate(this, &staticMetaObject, 27, _a);
+}
+
+// SIGNAL 28
+void MainWindow::film_set_misc_companies(const QStringList & _t1)
+{
+    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    QMetaObject::activate(this, &staticMetaObject, 28, _a);
+}
+
+// SIGNAL 29
+void MainWindow::film_set_full_sized_cover(const QString & _t1)
+{
+    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    QMetaObject::activate(this, &staticMetaObject, 29, _a);
 }
 QT_END_MOC_NAMESPACE

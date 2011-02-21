@@ -27,7 +27,6 @@ public slots:
     void display_film_transportation(const QStringList &list);
     void display_film_misc_crew(const QStringList &list);
     void display_film_misc_companies(const QStringList &list);
-
     void display_film_producers(const QStringList &list);
     void display_film_production_companies(const QStringList &list);
     void display_film_distributors(const QStringList &list);
@@ -53,17 +52,14 @@ signals:
     void film_set_mpaa_rating(const QString &string);
     void film_set_certificates(const QStringList &list);
     void film_set_plot(const QString &string);
-
     void film_set_cast(const QStringList &list);
     void film_set_stunt_performers(const QStringList &list);
     void film_set_casting_director(const QString& string);
-
     void film_set_producers(const QStringList &list);
     void film_set_production_companies(const QStringList &list);
     void film_set_distributors(const QStringList &list);
     void film_set_art_direction(const QStringList &list);
     void film_set_makeup(const QStringList &list);
-
     void film_set_akas(const QStringList &list);
     void film_set_transportation(const QStringList &list);
     void film_set_misc_crew(const QStringList &list);
