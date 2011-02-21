@@ -1,18 +1,21 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2011-02-15T08:46:14
+# Project created by QtCreator 2011-02-17T13:40:36
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui network
 
 TARGET = ImdbPro
 TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    imdb.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    imdb.h
 
 FORMS    += mainwindow.ui
+CONFIG   += debug
