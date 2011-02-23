@@ -27,11 +27,21 @@ public slots:
     void display_film_transportation(const QStringList &list);
     void display_film_misc_crew(const QStringList &list);
     void display_film_misc_companies(const QStringList &list);
-    void display_film_producers(const QStringList &list);
+    void display_film_producer(const QStringList &list);
     void display_film_production_companies(const QStringList &list);
     void display_film_distributors(const QStringList &list);
-    void display_film_art_direction(const QStringList &list);
+    void display_film_art_director(const QStringList &list);
     void display_film_makeup(const QStringList &list);
+    void display_film_music_department(const QStringList &list);
+    void display_film_sound_crew(const QStringList &list);
+    void display_film_set_decoration(const QStringList &list);
+    void display_film_art_department(const QStringList &list);
+    void display_film_camera_and_electrical_department(const QStringList &list);
+    void display_film_costume_department(const QStringList &list);
+    void display_film_sfx_department(const QStringList &list);
+    void display_film_sfx_companies(const QStringList &list);
+    void display_film_visual_effects(const QStringList &list);
+    void display_film_animation_department(const QStringList &list);
 
 
 signals:
@@ -55,17 +65,30 @@ signals:
     void film_set_cast(const QStringList &list);
     void film_set_stunt_performers(const QStringList &list);
     void film_set_casting_director(const QString& string);
-    void film_set_producers(const QStringList &list);
+    void film_set_producer(const QStringList &list);
+    void film_set_cinematographer(const QString &list);
     void film_set_production_companies(const QStringList &list);
+    void film_set_editor(const QString &list);
     void film_set_distributors(const QStringList &list);
-    void film_set_art_direction(const QStringList &list);
+    void film_set_art_director(const QStringList &list);
     void film_set_makeup(const QStringList &list);
     void film_set_akas(const QStringList &list);
     void film_set_transportation(const QStringList &list);
     void film_set_misc_crew(const QStringList &list);
     void film_set_misc_companies(const QStringList &list);
-
     void film_set_full_sized_cover(const QString& string);
+    void film_set_music_department(const QStringList &list);
+    void film_set_sound_crew(const QStringList &list);
+    void film_set_set_decoration(const QStringList &list);
+    void film_set_art_department(const QStringList &list);
+    void film_set_camera_and_electrical_department(const QStringList &list);
+    void film_set_costume_department(const QStringList &list);
+    void film_set_sfx_department(const QStringList &list);
+    void film_set_sfx_companies(const QStringList &list);
+    void film_set_visual_effects(const QStringList &list);
+    void film_set_animation_department(const QStringList &list);
+
+
 
 private:
     Ui::MainWindow *ui;

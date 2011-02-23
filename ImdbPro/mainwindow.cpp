@@ -40,12 +40,30 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(this, SIGNAL(film_set_stunt_performers(const QStringList &)), this, SLOT(display_film_stunt_performers(const QStringList &)));
     connect(this, SIGNAL(film_set_casting_director(const QString &)), ui->film_casting_director, SLOT(setText(QString)));
 
+    connect(this, SIGNAL(film_set_editor(const QString &)), ui->film_editor, SLOT(setText(QString)));
+    connect(this, SIGNAL(film_set_cinematographer(const QString&)), ui->film_cinematographer, SLOT(setText(QString)));
+    connect(this, SIGNAL(film_set_producer(const QStringList &)), this, SLOT(display_film_producer(const QStringList &)));
+    connect(this, SIGNAL(film_set_production_companies(const QStringList &)), this, SLOT(display_film_production_companies(const QStringList &)));
+    connect(this, SIGNAL(film_set_distributors(const QStringList &)), this, SLOT(display_film_distributors(const QStringList &)));
+    connect(this, SIGNAL(film_set_art_director(const QStringList &)), this, SLOT(display_film_art_director(const QStringList &)));
+    connect(this, SIGNAL(film_set_makeup(const QStringList &)), this, SLOT(display_film_makeup(const QStringList &)));
+
     connect(this, SIGNAL(film_set_akas(const QStringList &)), this, SLOT(display_film_akas(const QStringList &)));
     connect(this, SIGNAL(film_set_transportation(const QStringList &)), this, SLOT(display_film_transportation(const QStringList &)));
     connect(this, SIGNAL(film_set_misc_crew(const QStringList &)), this, SLOT(display_film_misc_crew(const QStringList &)));
     connect(this, SIGNAL(film_set_misc_companies(const QStringList &)), this, SLOT(display_film_misc_companies(const QStringList &)));
 
-    connect(this, SIGNAL(film_set_producers(const QStringList &)), this, SLOT(display_film_producers(const QStringList &)));
+    connect(this, SIGNAL(film_set_music_department(const QStringList &)), this, SLOT(display_film_music_department(const QStringList &)));
+    connect(this, SIGNAL(film_set_sound_crew(const QStringList &)), this, SLOT(display_film_sound_crew(const QStringList &)));
+    connect(this, SIGNAL(film_set_set_decoration(const QStringList &)), this, SLOT(display_film_set_decoration(const QStringList &)));
+    connect(this, SIGNAL(film_set_art_department(const QStringList &)), this, SLOT(display_film_art_department(const QStringList &)));
+    connect(this, SIGNAL(film_set_camera_and_electrical_department(const QStringList &)), this, SLOT(display_film_camera_and_electrical_department(const QStringList &)));
+    connect(this, SIGNAL(film_set_costume_department(const QStringList &)), this, SLOT(display_film_costume_department(const QStringList &)));
+
+    connect(this, SIGNAL(film_set_sfx_department(const QStringList &)), this, SLOT(display_film_sfx_department(const QStringList &)));
+    connect(this, SIGNAL(film_set_sfx_companies(const QStringList &)), this, SLOT(display_film_sfx_companies(const QStringList &)));
+    connect(this, SIGNAL(film_set_visual_effects(const QStringList &)), this, SLOT(display_film_visual_effects(const QStringList &)));
+    connect(this, SIGNAL(film_set_animation_department(const QStringList &)), this, SLOT(display_film_animation_department(const QStringList &)));
 
     connect(this, SIGNAL(film_set_full_sized_cover(const QString&)), this, SLOT(display_film_full_sized_cover(const QString &)));
 }
@@ -110,8 +128,27 @@ void MainWindow::dispatch(const QMap<QString, QStringList> &film, const QPixmap 
     emit film_set_casting_director(get_field("casting director", film));
 
     // Production
-    emit film_set_producers(film.value("producers", QStringList()));
+    emit film_set_editor(get_field("editor", film));
+    emit film_set_cinematographer(get_field("cinematographer", film));
+    emit film_set_producer(film.value("producer", QStringList()));
     emit film_set_production_companies(film.value("production companies", QStringList()));
+    emit film_set_distributors(film.value("distributors", QStringList()));
+    emit film_set_art_director(film.value("art direction", QStringList()));
+    emit film_set_makeup(film.value("make up", QStringList()));
+
+    // Technical departments
+    emit film_set_music_department(film.value("music department", QStringList()));
+    emit film_set_sound_crew(film.value("sound crew", QStringList()));
+    emit film_set_set_decoration(film.value("set decoration", QStringList()));
+    emit film_set_art_department(film.value("art department", QStringList()));
+    emit film_set_camera_and_electrical_department(film.value("camera and electrical department", QStringList()));
+    emit film_set_costume_department(film.value("costume department", QStringList()));
+
+    // Special effects
+    emit film_set_sfx_department(film.value("special effects department", QStringList()));
+    emit film_set_sfx_companies(film.value("special effects companies", QStringList()));
+    emit film_set_visual_effects(film.value("visual effects", QStringList()));
+    emit film_set_animation_department(film.value("animation department", QStringList()));
 
     // Misc
     emit film_set_akas(film.value("akas", QStringList()));
@@ -162,7 +199,7 @@ void MainWindow::display_film_misc_companies(const QStringList &list) {
     setItems(ui->film_misc_companies, list);
 }
 
-void MainWindow::display_film_producers(const QStringList &list) {
+void MainWindow::display_film_producer(const QStringList &list) {
     setItems(ui->film_producer, list);
 }
 
@@ -170,7 +207,7 @@ void MainWindow::display_film_production_companies(const QStringList &list) {
     setItems(ui->film_production_companies, list);
 }
 
-void MainWindow::display_film_art_direction(const QStringList &list) {
+void MainWindow::display_film_art_director(const QStringList &list) {
     setItems(ui->film_art_director, list);
 }
 
@@ -187,5 +224,55 @@ void MainWindow::display_film_full_sized_cover(const QString &string) {
     QPixmap image;
     telechargeImage(string, image);
     ui->film_fullsize_cover->setPixmap(image);
+}
+
+
+void MainWindow::display_film_music_department(const QStringList &list) {
+    setItems(ui->film_music_department, list);
+}
+
+
+void MainWindow::display_film_sound_crew(const QStringList &list) {
+    setItems(ui->film_sound_crew, list);
+}
+
+
+void MainWindow::display_film_set_decoration(const QStringList &list) {
+    setItems(ui->film_set_decoration, list);
+}
+
+
+void MainWindow::display_film_art_department(const QStringList &list) {
+    setItems(ui->film_art_department, list);
+}
+
+
+void MainWindow::display_film_camera_and_electrical_department(const QStringList &list) {
+    setItems(ui->film_camera_and_electrical_department, list);
+}
+
+
+void MainWindow::display_film_costume_department(const QStringList &list) {
+    setItems(ui->film_costume_department, list);
+}
+
+
+void MainWindow::display_film_sfx_department(const QStringList &list) {
+    setItems(ui->film_sfx_department, list);
+}
+
+
+void MainWindow::display_film_sfx_companies(const QStringList &list) {
+    setItems(ui->film_sfx_companies, list);
+}
+
+
+void MainWindow::display_film_visual_effects(const QStringList &list) {
+    setItems(ui->film_visual_effects, list);
+}
+
+
+void MainWindow::display_film_animation_department(const QStringList &list) {
+    setItems(ui->film_animation_department, list);
 }
 

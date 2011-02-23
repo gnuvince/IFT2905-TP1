@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>755</width>
-    <height>457</height>
+    <height>451</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -40,7 +40,7 @@
      </layout>
     </item>
     <item>
-     <widget class="QTabWidget" name="tabWidget">
+     <widget class="QTabWidget" name="tab_sfx">
       <property name="maximumSize">
        <size>
         <width>16777215</width>
@@ -48,7 +48,7 @@
        </size>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>5</number>
       </property>
       <widget class="QWidget" name="tab_general">
        <property name="sizePolicy">
@@ -68,7 +68,7 @@
             <item>
              <widget class="QLabel" name="film_cover">
               <property name="text">
-               <string>cover</string>
+               <string/>
               </property>
              </widget>
             </item>
@@ -99,7 +99,7 @@
                  </font>
                 </property>
                 <property name="text">
-                 <string>title</string>
+                 <string/>
                 </property>
                 <property name="wordWrap">
                  <bool>true</bool>
@@ -128,14 +128,14 @@
                 <item>
                  <widget class="QLabel" name="film_rating">
                   <property name="text">
-                   <string>rating</string>
+                   <string/>
                   </property>
                  </widget>
                 </item>
                 <item>
                  <widget class="QLabel" name="film_votes">
                   <property name="text">
-                   <string>votes</string>
+                   <string/>
                   </property>
                  </widget>
                 </item>
@@ -159,7 +159,7 @@
                 <item>
                  <widget class="QLabel" name="film_rank">
                   <property name="text">
-                   <string>rank</string>
+                   <string/>
                   </property>
                  </widget>
                 </item>
@@ -214,7 +214,7 @@
             <item row="1" column="1">
              <widget class="QLabel" name="film_country_general">
               <property name="text">
-               <string>Pays</string>
+               <string/>
               </property>
              </widget>
             </item>
@@ -228,7 +228,7 @@
             <item row="2" column="1">
              <widget class="QLabel" name="film_director">
               <property name="text">
-               <string>Réalisateurs</string>
+               <string/>
               </property>
              </widget>
             </item>
@@ -242,7 +242,7 @@
             <item row="3" column="1">
              <widget class="QLabel" name="film_writer">
               <property name="text">
-               <string>Auteur</string>
+               <string/>
               </property>
              </widget>
             </item>
@@ -256,7 +256,7 @@
             <item row="4" column="1">
              <widget class="QLabel" name="film_original_music">
               <property name="text">
-               <string>Musique originale</string>
+               <string/>
               </property>
              </widget>
             </item>
@@ -270,7 +270,7 @@
             <item row="5" column="1">
              <widget class="QLabel" name="film_languages">
               <property name="text">
-               <string>language</string>
+               <string/>
               </property>
              </widget>
             </item>
@@ -284,7 +284,7 @@
             <item row="6" column="1">
              <widget class="QLabel" name="film_genres">
               <property name="text">
-               <string>genres</string>
+               <string/>
               </property>
              </widget>
             </item>
@@ -298,7 +298,7 @@
             <item row="7" column="1">
              <widget class="QLabel" name="film_runtime">
               <property name="text">
-               <string>runtime</string>
+               <string/>
               </property>
              </widget>
             </item>
@@ -312,7 +312,7 @@
             <item row="8" column="1">
              <widget class="QLabel" name="film_aspect_ratio">
               <property name="text">
-               <string>aspectRatio</string>
+               <string/>
               </property>
              </widget>
             </item>
@@ -326,7 +326,7 @@
             <item row="0" column="1">
              <widget class="QLabel" name="film_year">
               <property name="text">
-               <string>year</string>
+               <string/>
               </property>
              </widget>
             </item>
@@ -347,7 +347,7 @@
             <item row="0" column="1">
              <widget class="QLabel" name="film_mpaa_rating">
               <property name="text">
-               <string>mpaa_rating</string>
+               <string/>
               </property>
               <property name="wordWrap">
                <bool>true</bool>
@@ -398,40 +398,69 @@
        <attribute name="title">
         <string>Distribution</string>
        </attribute>
-       <layout class="QFormLayout" name="formLayout_4">
-        <item row="0" column="0">
-         <widget class="QLabel" name="film_casting_director_lbl">
-          <property name="text">
-           <string>Directeur(s) de distribution</string>
-          </property>
-         </widget>
+       <layout class="QVBoxLayout" name="verticalLayout_13">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLabel" name="film_casting_director_lbl">
+            <property name="text">
+             <string>Directeur(s) de distribution:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="film_casting_director">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
         </item>
-        <item row="0" column="1">
-         <widget class="QLabel" name="film_casting_director">
-          <property name="text">
-           <string>Casting director</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="QLabel" name="film_cast_lbl">
-          <property name="text">
-           <string>Acteurs</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QListWidget" name="film_cast"/>
-        </item>
-        <item row="2" column="0">
-         <widget class="QLabel" name="film_stunt_performer_lbl">
-          <property name="text">
-           <string>Cascadeurs</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="1">
-         <widget class="QListWidget" name="film_stunt_performers"/>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_11">
+            <item>
+             <widget class="QLabel" name="film_cast_lbl">
+              <property name="text">
+               <string>Acteurs</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QListWidget" name="film_cast"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_12">
+            <item>
+             <widget class="QLabel" name="film_stunt_performer_lbl">
+              <property name="text">
+               <string>Cascadeurs</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QListWidget" name="film_stunt_performers"/>
+            </item>
+           </layout>
+          </item>
+         </layout>
         </item>
        </layout>
       </widget>
@@ -439,95 +468,146 @@
        <attribute name="title">
         <string>Production</string>
        </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_9">
+       <layout class="QVBoxLayout" name="verticalLayout_20">
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_6">
           <item>
-           <layout class="QFormLayout" name="formLayout_6">
-            <property name="fieldGrowthPolicy">
-             <enum>QFormLayout::ExpandingFieldsGrow</enum>
+           <widget class="QLabel" name="film_editor_lbl">
+            <property name="text">
+             <string>Éditeur:</string>
             </property>
-            <item row="0" column="0">
-             <widget class="QLabel" name="film_producer_lbl">
-              <property name="text">
-               <string>Producteurs</string>
-              </property>
-             </widget>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="film_editor">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <item>
+           <widget class="QLabel" name="film_cinematographer_lbl">
+            <property name="text">
+             <string>Cinématographe:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="film_cinematographer">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_5">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_10">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_18">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_9">
+              <item>
+               <widget class="QLabel" name="film_producer_lbl">
+                <property name="text">
+                 <string>Producteurs</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QListWidget" name="film_producer"/>
+              </item>
+             </layout>
             </item>
-            <item row="0" column="1">
-             <widget class="QListWidget" name="film_producer"/>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_14">
+              <item>
+               <widget class="QLabel" name="film_production_companies_lbl">
+                <property name="text">
+                 <string>Société de production</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QListWidget" name="film_production_companies"/>
+              </item>
+             </layout>
             </item>
-            <item row="1" column="0">
-             <widget class="QLabel" name="film_production_companies_lbl">
-              <property name="text">
-               <string>Société de production</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="1">
-             <widget class="QListWidget" name="film_production_companies"/>
-            </item>
-            <item row="2" column="0">
-             <widget class="QLabel" name="film_distributors_lbl">
-              <property name="text">
-               <string>Distributeurs</string>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="1">
-             <widget class="QListWidget" name="film_distributors"/>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_15">
+              <item>
+               <widget class="QLabel" name="film_distributors_lbl">
+                <property name="text">
+                 <string>Distributeurs</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QListWidget" name="film_distributors"/>
+              </item>
+             </layout>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QFormLayout" name="formLayout_5">
-            <item row="0" column="0">
-             <widget class="QLabel" name="film_editor_lbl">
-              <property name="text">
-               <string>Éditeur</string>
-              </property>
-             </widget>
+           <layout class="QVBoxLayout" name="verticalLayout_19">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_17">
+              <item>
+               <widget class="QLabel" name="film_art_director_lbl">
+                <property name="text">
+                 <string>Direction artistique</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QListWidget" name="film_art_director"/>
+              </item>
+             </layout>
             </item>
-            <item row="0" column="1">
-             <widget class="QLabel" name="film_editor">
-              <property name="text">
-               <string>TextLabel</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="0">
-             <widget class="QLabel" name="film_cinematographer_lbl">
-              <property name="text">
-               <string>Cinématographe</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="1">
-             <widget class="QLabel" name="film_cinematographer">
-              <property name="text">
-               <string>TextLabel</string>
-              </property>
-             </widget>
-            </item>
-            <item row="3" column="0">
-             <widget class="QLabel" name="film_art_director_lbl">
-              <property name="text">
-               <string>Direction artistique</string>
-              </property>
-             </widget>
-            </item>
-            <item row="3" column="1">
-             <widget class="QListWidget" name="film_art_director"/>
-            </item>
-            <item row="4" column="0">
-             <widget class="QLabel" name="film_makeup_lbl">
-              <property name="text">
-               <string>Maquillages</string>
-              </property>
-             </widget>
-            </item>
-            <item row="4" column="1">
-             <widget class="QListWidget" name="film_makeup"/>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_16">
+              <item>
+               <widget class="QLabel" name="film_makeup_lbl">
+                <property name="text">
+                 <string>Maquillages</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QListWidget" name="film_makeup"/>
+              </item>
+             </layout>
             </item>
            </layout>
           </item>
@@ -539,136 +619,193 @@
        <attribute name="title">
         <string>Équipes techniques</string>
        </attribute>
-       <widget class="QLabel" name="film_music_department">
-        <property name="geometry">
-         <rect>
-          <x>80</x>
-          <y>30</y>
-          <width>121</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Équipe musicale</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="film_sound_crew">
-        <property name="geometry">
-         <rect>
-          <x>80</x>
-          <y>110</y>
-          <width>121</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Équipe de sons</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="film_visual_effects">
-        <property name="geometry">
-         <rect>
-          <x>460</x>
-          <y>180</y>
-          <width>101</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Effets visuels</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="film_sfx_companies">
-        <property name="geometry">
-         <rect>
-          <x>70</x>
-          <y>190</y>
-          <width>191</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Sociétés des effets spéciaux</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="film_set_decoration">
-        <property name="geometry">
-         <rect>
-          <x>70</x>
-          <y>260</y>
-          <width>121</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Équipe des décors</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="film_costume_department">
-        <property name="geometry">
-         <rect>
-          <x>340</x>
-          <y>270</y>
-          <width>141</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Équipe des costumes</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="film_sfx_department">
-        <property name="geometry">
-         <rect>
-          <x>450</x>
-          <y>230</y>
-          <width>181</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Équipe des effets spéciaux</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="film_art_department">
-        <property name="geometry">
-         <rect>
-          <x>300</x>
-          <y>150</y>
-          <width>141</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Équipe artistique</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="film_camera_electricity">
-        <property name="geometry">
-         <rect>
-          <x>450</x>
-          <y>50</y>
-          <width>161</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Caméras et électricité</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label">
-        <property name="geometry">
-         <rect>
-          <x>190</x>
-          <y>290</y>
-          <width>131</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Équipe d'animation</string>
-        </property>
-       </widget>
+       <layout class="QHBoxLayout" name="horizontalLayout_11">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_24">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_21">
+            <item>
+             <widget class="QLabel" name="label_23">
+              <property name="text">
+               <string>Équipe musicale</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QListWidget" name="film_music_department"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_22">
+            <item>
+             <widget class="QLabel" name="label_22">
+              <property name="text">
+               <string>Équipe de sons</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QListWidget" name="film_sound_crew"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_23">
+            <item>
+             <widget class="QLabel" name="label_24">
+              <property name="text">
+               <string>Équipe des décors</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QListWidget" name="film_set_decoration"/>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_28">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_25">
+            <item>
+             <widget class="QLabel" name="label_20">
+              <property name="text">
+               <string>Équipe artistique</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QListWidget" name="film_art_department"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_26">
+            <item>
+             <widget class="QLabel" name="label_21">
+              <property name="text">
+               <string>Caméras et électricité</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QListWidget" name="film_camera_and_electrical_department"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_27">
+            <item>
+             <widget class="QLabel" name="label_17">
+              <property name="text">
+               <string>Équipe des costumes</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QListWidget" name="film_costume_department"/>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+       <zorder>label_23</zorder>
+       <zorder>label_22</zorder>
+       <zorder>label_24</zorder>
+       <zorder>label_17</zorder>
+       <zorder>label_20</zorder>
+       <zorder>label_21</zorder>
+       <zorder>film_music_department</zorder>
+       <zorder>film_camera_and_electrical_department</zorder>
+       <zorder>film_sound_crew</zorder>
+       <zorder>film_art_department</zorder>
+       <zorder>film_set_decoration</zorder>
+       <zorder>film_costume_department</zorder>
+       <zorder>label_22</zorder>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Effets spéciaux</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_12">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_33">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_29">
+            <item>
+             <widget class="QLabel" name="label_18">
+              <property name="text">
+               <string>Équipe des effets spéciaux</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QListWidget" name="film_sfx_department"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_32">
+            <item>
+             <widget class="QLabel" name="label_19">
+              <property name="text">
+               <string>Sociétés des effets spéciaux</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QListWidget" name="film_sfx_companies"/>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_34">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_30">
+            <item>
+             <widget class="QLabel" name="label_16">
+              <property name="text">
+               <string>Effets visuels</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QListWidget" name="film_visual_effects"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_31">
+            <item>
+             <widget class="QLabel" name="label">
+              <property name="text">
+               <string>Équipe d'animation</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QListWidget" name="film_animation_department"/>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+       <zorder>label_18</zorder>
+       <zorder>film_sfx_department</zorder>
+       <zorder>label_16</zorder>
+       <zorder>label_19</zorder>
+       <zorder>film_sfx_companies</zorder>
+       <zorder>label</zorder>
+       <zorder>film_animation_department</zorder>
+       <zorder>film_visual_effects</zorder>
+       <zorder>film_sfx_department</zorder>
       </widget>
       <widget class="QWidget" name="tab_misc">
        <attribute name="title">
@@ -676,38 +813,35 @@
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_5">
         <item>
-         <layout class="QFormLayout" name="formLayout_3">
-          <property name="fieldGrowthPolicy">
-           <enum>QFormLayout::ExpandingFieldsGrow</enum>
-          </property>
-          <item row="0" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout_35">
+          <item>
            <widget class="QLabel" name="film_transportation_lbl">
             <property name="text">
              <string>Transport</string>
             </property>
            </widget>
           </item>
-          <item row="0" column="1">
+          <item>
            <widget class="QListWidget" name="film_transportation"/>
           </item>
-          <item row="1" column="0">
+          <item>
            <widget class="QLabel" name="film_misc_crew_lbl">
             <property name="text">
              <string>Équipe diverse</string>
             </property>
            </widget>
           </item>
-          <item row="1" column="1">
+          <item>
            <widget class="QListWidget" name="film_misc_crew"/>
           </item>
-          <item row="2" column="0">
+          <item>
            <widget class="QLabel" name="film_misc_companies_lbl">
             <property name="text">
              <string>Compagnies diverses</string>
             </property>
            </widget>
           </item>
-          <item row="2" column="1">
+          <item>
            <widget class="QListWidget" name="film_misc_companies"/>
           </item>
          </layout>
@@ -720,13 +854,41 @@
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_7">
         <item>
-         <widget class="QLabel" name="film_fullsize_cover">
-          <property name="text">
-           <string>fullSizeCover</string>
+         <widget class="QScrollArea" name="scrollArea">
+          <property name="widgetResizable">
+           <bool>true</bool>
           </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>725</width>
+             <height>357</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_10">
+            <item>
+             <widget class="QLabel" name="film_fullsize_cover">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="scaledContents">
+               <bool>false</bool>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
          </widget>
         </item>
        </layout>
