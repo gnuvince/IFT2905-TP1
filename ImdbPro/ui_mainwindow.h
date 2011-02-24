@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Wed Feb 23 16:38:44 2011
+** Created: Thu Feb 24 14:48:01 2011
 **      by: Qt User Interface Compiler version 4.7.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -183,12 +183,15 @@ public:
     QWidget *scrollAreaWidgetContents;
     QVBoxLayout *verticalLayout_10;
     QLabel *film_fullsize_cover;
+    QWidget *tab_2;
+    QVBoxLayout *verticalLayout_36;
+    QListWidget *history;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(755, 451);
+        MainWindow->resize(755, 454);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         verticalLayout_6 = new QVBoxLayout(centralWidget);
@@ -800,19 +803,6 @@ public:
         horizontalLayout_11->addLayout(verticalLayout_28);
 
         tab_sfx->addTab(tab_technical, QString());
-        label_23->raise();
-        label_22->raise();
-        label_24->raise();
-        label_17->raise();
-        label_20->raise();
-        label_21->raise();
-        film_music_department->raise();
-        film_camera_and_electrical_department->raise();
-        film_sound_crew->raise();
-        film_art_department->raise();
-        film_set_decoration->raise();
-        film_costume_department->raise();
-        label_22->raise();
         tab = new QWidget();
         tab->setObjectName(QString::fromUtf8("tab"));
         horizontalLayout_12 = new QHBoxLayout(tab);
@@ -896,15 +886,6 @@ public:
         horizontalLayout_12->addLayout(verticalLayout_34);
 
         tab_sfx->addTab(tab, QString());
-        label_18->raise();
-        film_sfx_department->raise();
-        label_16->raise();
-        label_19->raise();
-        film_sfx_companies->raise();
-        label->raise();
-        film_animation_department->raise();
-        film_visual_effects->raise();
-        film_sfx_department->raise();
         tab_misc = new QWidget();
         tab_misc->setObjectName(QString::fromUtf8("tab_misc"));
         verticalLayout_5 = new QVBoxLayout(tab_misc);
@@ -959,7 +940,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 725, 357));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 713, 350));
         verticalLayout_10 = new QVBoxLayout(scrollAreaWidgetContents);
         verticalLayout_10->setSpacing(6);
         verticalLayout_10->setContentsMargins(11, 11, 11, 11);
@@ -977,6 +958,18 @@ public:
         verticalLayout_7->addWidget(scrollArea);
 
         tab_sfx->addTab(tab_fullcover, QString());
+        tab_2 = new QWidget();
+        tab_2->setObjectName(QString::fromUtf8("tab_2"));
+        verticalLayout_36 = new QVBoxLayout(tab_2);
+        verticalLayout_36->setSpacing(6);
+        verticalLayout_36->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_36->setObjectName(QString::fromUtf8("verticalLayout_36"));
+        history = new QListWidget(tab_2);
+        history->setObjectName(QString::fromUtf8("history"));
+
+        verticalLayout_36->addWidget(history);
+
+        tab_sfx->addTab(tab_2, QString());
 
         verticalLayout_6->addWidget(tab_sfx);
 
@@ -984,7 +977,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tab_sfx->setCurrentIndex(6);
+        tab_sfx->setCurrentIndex(7);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -1057,6 +1050,7 @@ public:
         tab_sfx->setTabText(tab_sfx->indexOf(tab_misc), QApplication::translate("MainWindow", "Divers", 0, QApplication::UnicodeUTF8));
         film_fullsize_cover->setText(QString());
         tab_sfx->setTabText(tab_sfx->indexOf(tab_fullcover), QApplication::translate("MainWindow", "Image", 0, QApplication::UnicodeUTF8));
+        tab_sfx->setTabText(tab_sfx->indexOf(tab_2), QApplication::translate("MainWindow", "Historique", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

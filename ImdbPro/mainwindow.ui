@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>755</width>
-    <height>451</height>
+    <height>454</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -48,7 +48,7 @@
        </size>
       </property>
       <property name="currentIndex">
-       <number>5</number>
+       <number>7</number>
       </property>
       <widget class="QWidget" name="tab_general">
        <property name="sizePolicy">
@@ -713,19 +713,6 @@
          </layout>
         </item>
        </layout>
-       <zorder>label_23</zorder>
-       <zorder>label_22</zorder>
-       <zorder>label_24</zorder>
-       <zorder>label_17</zorder>
-       <zorder>label_20</zorder>
-       <zorder>label_21</zorder>
-       <zorder>film_music_department</zorder>
-       <zorder>film_camera_and_electrical_department</zorder>
-       <zorder>film_sound_crew</zorder>
-       <zorder>film_art_department</zorder>
-       <zorder>film_set_decoration</zorder>
-       <zorder>film_costume_department</zorder>
-       <zorder>label_22</zorder>
       </widget>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -797,15 +784,6 @@
          </layout>
         </item>
        </layout>
-       <zorder>label_18</zorder>
-       <zorder>film_sfx_department</zorder>
-       <zorder>label_16</zorder>
-       <zorder>label_19</zorder>
-       <zorder>film_sfx_companies</zorder>
-       <zorder>label</zorder>
-       <zorder>film_animation_department</zorder>
-       <zorder>film_visual_effects</zorder>
-       <zorder>film_sfx_department</zorder>
       </widget>
       <widget class="QWidget" name="tab_misc">
        <attribute name="title">
@@ -863,8 +841,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>725</width>
-             <height>357</height>
+             <width>713</width>
+             <height>350</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -890,6 +868,16 @@
            </layout>
           </widget>
          </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Historique</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_36">
+        <item>
+         <widget class="QListWidget" name="history"/>
         </item>
        </layout>
       </widget>

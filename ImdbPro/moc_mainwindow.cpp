@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mainwindow.h'
 **
-** Created: Wed Feb 23 16:35:16 2011
+** Created: Thu Feb 24 14:54:13 2011
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.0)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_MainWindow[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-      67,   14, // methods
+      69,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -100,6 +100,8 @@ static const uint qt_meta_data_MainWindow[] = {
     2248,  419,   11,   11, 0x0a,
     2288,  419,   11,   11, 0x0a,
     2329,  419,   11,   11, 0x0a,
+    2376,   42,   11,   11, 0x0a,
+    2411, 2406,   11,   11, 0x0a,
 
        0        // eod
 };
@@ -169,6 +171,8 @@ static const char qt_meta_stringdata_MainWindow[] = {
     "display_film_sfx_companies(QStringList)\0"
     "display_film_visual_effects(QStringList)\0"
     "display_film_animation_department(QStringList)\0"
+    "display_window_title(QString)\0item\0"
+    "load_existing_movie(QListWidgetItem*)\0"
 };
 
 const QMetaObject MainWindow::staticMetaObject = {
@@ -267,9 +271,11 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 64: display_film_sfx_companies((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
         case 65: display_film_visual_effects((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
         case 66: display_film_animation_department((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
+        case 67: display_window_title((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 68: load_existing_movie((*reinterpret_cast< QListWidgetItem*(*)>(_a[1]))); break;
         default: ;
         }
-        _id -= 67;
+        _id -= 69;
     }
     return _id;
 }

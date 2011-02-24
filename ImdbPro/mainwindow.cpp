@@ -1,5 +1,6 @@
 #include <cmath>
 
+#include "QFile"
 #include "QDebug"
 #include "QMessageBox"
 #include "mainwindow.h"
@@ -13,11 +14,17 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     imdb = new IMDb(this);
+    files = new QStringList;
+
+    ui->history->setIconSize(QSize(96, 64));
 
     connect(imdb, SIGNAL(filmDispo(const QMap<QString,QStringList> &, const QPixmap &)),
             this, SLOT(dispatch(const QMap<QString,QStringList> &, const QPixmap &)));
     connect(ui->search_button, SIGNAL(clicked()), this, SLOT(search_film()));
     connect(ui->search_field, SIGNAL(returnPressed()), ui->search_button, SIGNAL(clicked()));
+    connect(ui->history, SIGNAL(itemDoubleClicked(QListWidgetItem*)), this, SLOT(load_existing_movie(QListWidgetItem*)));
+
+    connect(this, SIGNAL(film_set_title(const QString &)), this, SLOT(display_window_title(const QString &)));
 
     connect(this, SIGNAL(film_set_cover(const QPixmap &)), ui->film_cover, SLOT(setPixmap(QPixmap)));
     connect(this, SIGNAL(film_set_title(const QString &)), ui->film_title, SLOT(setText(QString)));
@@ -166,10 +173,23 @@ void MainWindow::dispatch(const QMap<QString, QStringList> &film, const QPixmap 
         msgbox.setIcon(QMessageBox::Information);
         msgbox.exec();
     }
+    else {
+        QString filename = save_film(film);
+        if (!files->contains(filename)) {
+            files->append(filename);
+            ui->history->addItem(filename);
+            QListWidgetItem* current = ui->history->item(ui->history->count() - 1);
+            qDebug() << current;
+            current->setIcon(image);
+        }
+    }
+
 }
 
 void MainWindow::search_film() {
+    this->setCursor(Qt::WaitCursor);
     imdb->changeFilmInternet(ui->search_field->text());
+    this->setCursor(Qt::ArrowCursor);
 }
 
 void setItems(QListWidget *widget, const QStringList &list) {
@@ -284,3 +304,26 @@ void MainWindow::display_film_animation_department(const QStringList &list) {
     setItems(ui->film_animation_department, list);
 }
 
+QString MainWindow::save_film(const QMap<QString, QStringList> &film) {
+    QString filename = get_field("title", film);
+    QFile out(QString("/tmp/") + filename);
+    if (out.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        QTextStream stream(&out);
+        foreach (QString field, film.keys()) {
+            stream << field << " :\n";
+            foreach (QString info, film.value(field, QStringList())) {
+                stream << '\t' << info << "\n";
+            }
+        }
+    }
+    return filename;
+}
+
+void MainWindow::load_existing_movie(QListWidgetItem *item) {
+    QString filename = QString("/tmp/") + item->text();
+    imdb->changeFilmLocal(filename);
+}
+
+void MainWindow::display_window_title(const QString &string) {
+    this->setWindowTitle(tr("ImdbPro - %1").arg(string));
+}

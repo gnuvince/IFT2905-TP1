@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QtGui>
 #include "imdb.h"
 
 namespace Ui {
@@ -15,6 +16,7 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+    QString save_film(const QMap<QString, QStringList> &film);
 
 public slots:
     void dispatch(const QMap<QString, QStringList> &film, const QPixmap &image);
@@ -42,6 +44,9 @@ public slots:
     void display_film_sfx_companies(const QStringList &list);
     void display_film_visual_effects(const QStringList &list);
     void display_film_animation_department(const QStringList &list);
+    void display_window_title(const QString &string);
+    void load_existing_movie(QListWidgetItem *item);
+
 
 
 signals:
@@ -93,6 +98,7 @@ signals:
 private:
     Ui::MainWindow *ui;
     IMDb *imdb;
+    QStringList *files;
 };
 
 #endif // MAINWINDOW_H
