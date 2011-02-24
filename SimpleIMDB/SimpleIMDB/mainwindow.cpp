@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "QDebug"
+#include "QFile"
 #include <cmath>
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -76,6 +77,8 @@ void MainWindow::field_dispatcher(const QMap<QString, QStringList> &film, const 
     emit set_film_director(get_field("director", film));
     emit set_film_genres(film.value("genres", QStringList()).join(QString(", ")));
     emit set_film_actors(film.value("cast", QStringList()));
+
+    save_film(film);
 }
 
 void MainWindow::set_film_actors_slot(const QStringList &actors) {
@@ -87,4 +90,22 @@ void MainWindow::set_film_actors_slot(const QStringList &actors) {
 void MainWindow::search_movie() {
     QString title = ui->search_field->text();
     emit changeFilmInternet(title);
+}
+
+void MainWindow::save_film(const QMap<QString, QStringList> &film) {
+    QStringList fields = QStringList();
+    fields << "title" << "rating" << "top 250 rank" << "countries"
+           << "year" << "runtimes" << "plot outline" << "director"
+           << "genres" << "cast" << "cover url";
+    QString title = get_field("title", film).replace(QChar(' '), QChar('_'));
+    QFile out(QString("/tmp/") + title);
+    if (out.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        QTextStream stream(&out);
+        foreach (QString field, fields) {
+            stream << field << " :\n";
+            foreach (QString info, film.value(field, QStringList())) {
+                stream << '\t' << info << "\n";
+            }
+        }
+    }
 }

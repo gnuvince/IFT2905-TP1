@@ -14,7 +14,9 @@ class MainWindow : public QMainWindow
 
 public:
     explicit MainWindow(QWidget *parent = 0);
-    ~MainWindow();
+    ~MainWindow();    
+    void save_film(const QMap<QString, QStringList> &film);
+
 
 public slots:
     void field_dispatcher(const QMap<QString,QStringList> &film, const QPixmap &image);
