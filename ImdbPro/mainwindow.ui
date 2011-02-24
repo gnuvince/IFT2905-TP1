@@ -47,9 +47,6 @@
         <height>401</height>
        </size>
       </property>
-      <property name="currentIndex">
-       <number>7</number>
-      </property>
       <widget class="QWidget" name="tab_general">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">

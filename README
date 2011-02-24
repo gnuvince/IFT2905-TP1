@@ -14,3 +14,11 @@ ImdbPro
 -------
     Interface avancée contenant les informations de production, distribution,
     techniques, etc. d'un film.
+
+Compilation
+-----------
+    Aller dans le dossier ImdbPro/ ou SimpleIMDB/SimpleIMDB/ et tapper "make".
+
+Exécution
+---------
+    S'assurer d'avoir le chemin nécessaire d'inclu pour exécuter imdbScript.py   
