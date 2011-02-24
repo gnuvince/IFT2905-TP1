@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include "QDebug"
 #include "QFile"
+#include "QMessageBox"
 #include <cmath>
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -10,6 +11,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     imdb = new IMDb(this);
+    files = new QStringList;
 
     connect(ui->search_button, SIGNAL(clicked()),
             this, SLOT(search_movie()));
@@ -33,6 +35,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(this, SIGNAL(set_film_genres(const QString&)), ui->film_genres, SLOT(setText(QString)));
     connect(this, SIGNAL(set_film_actors(const QStringList&)), this, SLOT(set_film_actors_slot(const QStringList&)));
     connect(ui->search_field, SIGNAL(returnPressed()), ui->search_button, SIGNAL(clicked()));
+    connect(ui->history, SIGNAL(itemDoubleClicked(QListWidgetItem*)), this, SLOT(load_existing_movie(QListWidgetItem*)));
 }
 
 MainWindow::~MainWindow()
@@ -78,7 +81,19 @@ void MainWindow::field_dispatcher(const QMap<QString, QStringList> &film, const 
     emit set_film_genres(film.value("genres", QStringList()).join(QString(", ")));
     emit set_film_actors(film.value("cast", QStringList()));
 
-    save_film(film);
+    if (film.size() <= 2) {
+        QMessageBox msgbox;
+        msgbox.setText(tr("Film introuvable."));
+        msgbox.setIcon(QMessageBox::Information);
+        msgbox.exec();
+    }
+    else {
+        QString filename = save_film(film);
+        if (!files->contains(filename)) {
+            files->append(filename);
+            ui->history->addItem(filename);
+        }
+    }
 }
 
 void MainWindow::set_film_actors_slot(const QStringList &actors) {
@@ -92,20 +107,22 @@ void MainWindow::search_movie() {
     emit changeFilmInternet(title);
 }
 
-void MainWindow::save_film(const QMap<QString, QStringList> &film) {
-    QStringList fields = QStringList();
-    fields << "title" << "rating" << "top 250 rank" << "countries"
-           << "year" << "runtimes" << "plot outline" << "director"
-           << "genres" << "cast" << "cover url";
-    QString title = get_field("title", film).replace(QChar(' '), QChar('_'));
-    QFile out(QString("/tmp/") + title);
+QString MainWindow::save_film(const QMap<QString, QStringList> &film) {
+    QString filename = get_field("title", film);
+    QFile out(QString("/tmp/") + filename);
     if (out.open(QIODevice::WriteOnly | QIODevice::Text)) {
         QTextStream stream(&out);
-        foreach (QString field, fields) {
+        foreach (QString field, film.keys()) {
             stream << field << " :\n";
             foreach (QString info, film.value(field, QStringList())) {
                 stream << '\t' << info << "\n";
             }
         }
     }
+    return filename;
+}
+
+void MainWindow::load_existing_movie(QListWidgetItem *item) {
+    QString filename = QString("/tmp/") + item->text();
+    imdb->changeFilmLocal(filename);
 }

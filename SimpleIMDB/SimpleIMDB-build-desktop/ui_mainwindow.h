@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Tue Feb 15 09:48:34 2011
+** Created: Thu Feb 24 12:29:43 2011
 **      by: Qt User Interface Compiler version 4.7.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -67,12 +67,15 @@ public:
     QLabel *film_genres;
     QLabel *label_7;
     QLabel *film_year;
+    QFrame *line_2;
+    QLabel *label_8;
+    QListWidget *history;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(455, 411);
+        MainWindow->resize(455, 496);
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(96);
         sizePolicy.setVerticalStretch(96);
@@ -128,7 +131,8 @@ public:
         sizePolicy1.setVerticalStretch(96);
         sizePolicy1.setHeightForWidth(film_cover->sizePolicy().hasHeightForWidth());
         film_cover->setSizePolicy(sizePolicy1);
-        film_cover->setMinimumSize(QSize(0, 96));
+        film_cover->setMinimumSize(QSize(64, 96));
+        film_cover->setFrameShape(QFrame::Box);
 
         horizontalLayout_2->addWidget(film_cover);
 
@@ -171,6 +175,7 @@ public:
 
         film_plot = new QPlainTextEdit(centralWidget);
         film_plot->setObjectName(QString::fromUtf8("film_plot"));
+        film_plot->setEnabled(false);
 
         verticalLayout_3->addWidget(film_plot);
 
@@ -255,6 +260,24 @@ public:
 
         verticalLayout_5->addLayout(verticalLayout_4);
 
+        line_2 = new QFrame(centralWidget);
+        line_2->setObjectName(QString::fromUtf8("line_2"));
+        line_2->setFrameShape(QFrame::HLine);
+        line_2->setFrameShadow(QFrame::Sunken);
+
+        verticalLayout_5->addWidget(line_2);
+
+        label_8 = new QLabel(centralWidget);
+        label_8->setObjectName(QString::fromUtf8("label_8"));
+
+        verticalLayout_5->addWidget(label_8);
+
+        history = new QListWidget(centralWidget);
+        history->setObjectName(QString::fromUtf8("history"));
+        history->setFlow(QListView::TopToBottom);
+
+        verticalLayout_5->addWidget(history);
+
         MainWindow->setCentralWidget(centralWidget);
         QWidget::setTabOrder(search_field, search_button);
         QWidget::setTabOrder(search_button, film_plot);
@@ -290,6 +313,7 @@ public:
         film_genres->setText(QString());
         label_7->setText(QApplication::translate("MainWindow", "Ann\303\251e:", 0, QApplication::UnicodeUTF8));
         film_year->setText(QString());
+        label_8->setText(QApplication::translate("MainWindow", "Historique", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

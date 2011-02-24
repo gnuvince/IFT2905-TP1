@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>455</width>
-    <height>411</height>
+    <height>496</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -82,9 +82,12 @@
           </property>
           <property name="minimumSize">
            <size>
-            <width>0</width>
+            <width>64</width>
             <height>96</height>
            </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Box</enum>
           </property>
           <property name="text">
            <string/>
@@ -141,7 +144,11 @@
        </layout>
       </item>
       <item>
-       <widget class="QPlainTextEdit" name="film_plot"/>
+       <widget class="QPlainTextEdit" name="film_plot">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>
@@ -237,6 +244,27 @@
        </widget>
       </item>
      </layout>
+    </item>
+    <item>
+     <widget class="Line" name="line_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_8">
+      <property name="text">
+       <string>Historique</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QListWidget" name="history">
+      <property name="flow">
+       <enum>QListView::TopToBottom</enum>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>

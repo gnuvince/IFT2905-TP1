@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mainwindow.h'
 **
-** Created: Tue Feb 15 09:48:18 2011
+** Created: Thu Feb 24 11:05:01 2011
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.0)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_MainWindow[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-      15,   14, // methods
+      16,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -48,6 +48,7 @@ static const uint qt_meta_data_MainWindow[] = {
      405,  394,   11,   11, 0x0a,
      457,   11,   11,   11, 0x0a,
      472,  327,   11,   11, 0x0a,
+     511,  506,   11,   11, 0x0a,
 
        0        // eod
 };
@@ -67,6 +68,7 @@ static const char qt_meta_stringdata_MainWindow[] = {
     "set_film_cover(QPixmap)\0film,image\0"
     "field_dispatcher(QMap<QString,QStringList>,QPixmap)\0"
     "search_movie()\0set_film_actors_slot(QStringList)\0"
+    "item\0load_existing_movie(QListWidgetItem*)\0"
 };
 
 const QMetaObject MainWindow::staticMetaObject = {
@@ -113,9 +115,10 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 12: field_dispatcher((*reinterpret_cast< const QMap<QString,QStringList>(*)>(_a[1])),(*reinterpret_cast< const QPixmap(*)>(_a[2]))); break;
         case 13: search_movie(); break;
         case 14: set_film_actors_slot((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
+        case 15: load_existing_movie((*reinterpret_cast< QListWidgetItem*(*)>(_a[1]))); break;
         default: ;
         }
-        _id -= 15;
+        _id -= 16;
     }
     return _id;
 }

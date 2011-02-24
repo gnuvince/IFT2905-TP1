@@ -1,6 +1,7 @@
 #include <cmath>
 
 #include "QDebug"
+#include "QMessageBox"
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "imdb.h"
@@ -158,6 +159,13 @@ void MainWindow::dispatch(const QMap<QString, QStringList> &film, const QPixmap 
 
     // Full sized cover
     emit film_set_full_sized_cover(get_field("full-size cover url", film));
+
+    if (film.size() <= 2) {
+        QMessageBox msgbox;
+        msgbox.setText(tr("Film introuvable."));
+        msgbox.setIcon(QMessageBox::Information);
+        msgbox.exec();
+    }
 }
 
 void MainWindow::search_film() {
