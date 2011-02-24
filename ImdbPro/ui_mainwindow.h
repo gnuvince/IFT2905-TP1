@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Thu Feb 24 14:48:01 2011
+** Created: Thu Feb 24 15:11:19 2011
 **      by: Qt User Interface Compiler version 4.7.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -40,7 +40,7 @@ public:
     QLabel *label_2;
     QLineEdit *search_field;
     QPushButton *search_button;
-    QTabWidget *tab_sfx;
+    QTabWidget *tabs;
     QWidget *tab_general;
     QVBoxLayout *verticalLayout_8;
     QHBoxLayout *horizontalLayout_5;
@@ -220,9 +220,9 @@ public:
 
         verticalLayout_6->addLayout(horizontalLayout_4);
 
-        tab_sfx = new QTabWidget(centralWidget);
-        tab_sfx->setObjectName(QString::fromUtf8("tab_sfx"));
-        tab_sfx->setMaximumSize(QSize(16777215, 401));
+        tabs = new QTabWidget(centralWidget);
+        tabs->setObjectName(QString::fromUtf8("tabs"));
+        tabs->setMaximumSize(QSize(16777215, 401));
         tab_general = new QWidget();
         tab_general->setObjectName(QString::fromUtf8("tab_general"));
         QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
@@ -477,7 +477,7 @@ public:
 
         verticalLayout_8->addLayout(horizontalLayout_9);
 
-        tab_sfx->addTab(tab_general, QString());
+        tabs->addTab(tab_general, QString());
         tab_distribution = new QWidget();
         tab_distribution->setObjectName(QString::fromUtf8("tab_distribution"));
         verticalLayout_13 = new QVBoxLayout(tab_distribution);
@@ -542,7 +542,7 @@ public:
 
         verticalLayout_13->addLayout(horizontalLayout_7);
 
-        tab_sfx->addTab(tab_distribution, QString());
+        tabs->addTab(tab_distribution, QString());
         tab_production = new QWidget();
         tab_production->setObjectName(QString::fromUtf8("tab_production"));
         verticalLayout_20 = new QVBoxLayout(tab_production);
@@ -687,7 +687,7 @@ public:
 
         verticalLayout_20->addLayout(horizontalLayout_10);
 
-        tab_sfx->addTab(tab_production, QString());
+        tabs->addTab(tab_production, QString());
         tab_technical = new QWidget();
         tab_technical->setObjectName(QString::fromUtf8("tab_technical"));
         horizontalLayout_11 = new QHBoxLayout(tab_technical);
@@ -802,7 +802,7 @@ public:
 
         horizontalLayout_11->addLayout(verticalLayout_28);
 
-        tab_sfx->addTab(tab_technical, QString());
+        tabs->addTab(tab_technical, QString());
         tab = new QWidget();
         tab->setObjectName(QString::fromUtf8("tab"));
         horizontalLayout_12 = new QHBoxLayout(tab);
@@ -885,7 +885,7 @@ public:
 
         horizontalLayout_12->addLayout(verticalLayout_34);
 
-        tab_sfx->addTab(tab, QString());
+        tabs->addTab(tab, QString());
         tab_misc = new QWidget();
         tab_misc->setObjectName(QString::fromUtf8("tab_misc"));
         verticalLayout_5 = new QVBoxLayout(tab_misc);
@@ -928,7 +928,7 @@ public:
 
         verticalLayout_5->addLayout(verticalLayout_35);
 
-        tab_sfx->addTab(tab_misc, QString());
+        tabs->addTab(tab_misc, QString());
         tab_fullcover = new QWidget();
         tab_fullcover->setObjectName(QString::fromUtf8("tab_fullcover"));
         verticalLayout_7 = new QVBoxLayout(tab_fullcover);
@@ -957,7 +957,7 @@ public:
 
         verticalLayout_7->addWidget(scrollArea);
 
-        tab_sfx->addTab(tab_fullcover, QString());
+        tabs->addTab(tab_fullcover, QString());
         tab_2 = new QWidget();
         tab_2->setObjectName(QString::fromUtf8("tab_2"));
         verticalLayout_36 = new QVBoxLayout(tab_2);
@@ -969,15 +969,15 @@ public:
 
         verticalLayout_36->addWidget(history);
 
-        tab_sfx->addTab(tab_2, QString());
+        tabs->addTab(tab_2, QString());
 
-        verticalLayout_6->addWidget(tab_sfx);
+        verticalLayout_6->addWidget(tabs);
 
         MainWindow->setCentralWidget(centralWidget);
 
         retranslateUi(MainWindow);
 
-        tab_sfx->setCurrentIndex(7);
+        tabs->setCurrentIndex(7);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -1016,12 +1016,12 @@ public:
         label_12->setText(QApplication::translate("MainWindow", "Certificats:", 0, QApplication::UnicodeUTF8));
         label_13->setText(QApplication::translate("MainWindow", "Synopsis:", 0, QApplication::UnicodeUTF8));
         label_15->setText(QApplication::translate("MainWindow", "Autres titres:", 0, QApplication::UnicodeUTF8));
-        tab_sfx->setTabText(tab_sfx->indexOf(tab_general), QApplication::translate("MainWindow", "G\303\251n\303\251ral", 0, QApplication::UnicodeUTF8));
+        tabs->setTabText(tabs->indexOf(tab_general), QApplication::translate("MainWindow", "G\303\251n\303\251ral", 0, QApplication::UnicodeUTF8));
         film_casting_director_lbl->setText(QApplication::translate("MainWindow", "Directeur(s) de distribution:", 0, QApplication::UnicodeUTF8));
         film_casting_director->setText(QString());
         film_cast_lbl->setText(QApplication::translate("MainWindow", "Acteurs", 0, QApplication::UnicodeUTF8));
         film_stunt_performer_lbl->setText(QApplication::translate("MainWindow", "Cascadeurs", 0, QApplication::UnicodeUTF8));
-        tab_sfx->setTabText(tab_sfx->indexOf(tab_distribution), QApplication::translate("MainWindow", "Distribution", 0, QApplication::UnicodeUTF8));
+        tabs->setTabText(tabs->indexOf(tab_distribution), QApplication::translate("MainWindow", "Distribution", 0, QApplication::UnicodeUTF8));
         film_editor_lbl->setText(QApplication::translate("MainWindow", "\303\211diteur:", 0, QApplication::UnicodeUTF8));
         film_editor->setText(QString());
         film_cinematographer_lbl->setText(QApplication::translate("MainWindow", "Cin\303\251matographe:", 0, QApplication::UnicodeUTF8));
@@ -1031,26 +1031,29 @@ public:
         film_distributors_lbl->setText(QApplication::translate("MainWindow", "Distributeurs", 0, QApplication::UnicodeUTF8));
         film_art_director_lbl->setText(QApplication::translate("MainWindow", "Direction artistique", 0, QApplication::UnicodeUTF8));
         film_makeup_lbl->setText(QApplication::translate("MainWindow", "Maquillages", 0, QApplication::UnicodeUTF8));
-        tab_sfx->setTabText(tab_sfx->indexOf(tab_production), QApplication::translate("MainWindow", "Production", 0, QApplication::UnicodeUTF8));
+        tabs->setTabText(tabs->indexOf(tab_production), QApplication::translate("MainWindow", "Production", 0, QApplication::UnicodeUTF8));
         label_23->setText(QApplication::translate("MainWindow", "\303\211quipe musicale", 0, QApplication::UnicodeUTF8));
         label_22->setText(QApplication::translate("MainWindow", "\303\211quipe de sons", 0, QApplication::UnicodeUTF8));
         label_24->setText(QApplication::translate("MainWindow", "\303\211quipe des d\303\251cors", 0, QApplication::UnicodeUTF8));
         label_20->setText(QApplication::translate("MainWindow", "\303\211quipe artistique", 0, QApplication::UnicodeUTF8));
         label_21->setText(QApplication::translate("MainWindow", "Cam\303\251ras et \303\251lectricit\303\251", 0, QApplication::UnicodeUTF8));
         label_17->setText(QApplication::translate("MainWindow", "\303\211quipe des costumes", 0, QApplication::UnicodeUTF8));
-        tab_sfx->setTabText(tab_sfx->indexOf(tab_technical), QApplication::translate("MainWindow", "\303\211quipes techniques", 0, QApplication::UnicodeUTF8));
+        tabs->setTabText(tabs->indexOf(tab_technical), QApplication::translate("MainWindow", "\303\211quipes techniques", 0, QApplication::UnicodeUTF8));
         label_18->setText(QApplication::translate("MainWindow", "\303\211quipe des effets sp\303\251ciaux", 0, QApplication::UnicodeUTF8));
         label_19->setText(QApplication::translate("MainWindow", "Soci\303\251t\303\251s des effets sp\303\251ciaux", 0, QApplication::UnicodeUTF8));
         label_16->setText(QApplication::translate("MainWindow", "Effets visuels", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("MainWindow", "\303\211quipe d'animation", 0, QApplication::UnicodeUTF8));
-        tab_sfx->setTabText(tab_sfx->indexOf(tab), QApplication::translate("MainWindow", "Effets sp\303\251ciaux", 0, QApplication::UnicodeUTF8));
+        tabs->setTabText(tabs->indexOf(tab), QApplication::translate("MainWindow", "Effets sp\303\251ciaux", 0, QApplication::UnicodeUTF8));
         film_transportation_lbl->setText(QApplication::translate("MainWindow", "Transport", 0, QApplication::UnicodeUTF8));
         film_misc_crew_lbl->setText(QApplication::translate("MainWindow", "\303\211quipe diverse", 0, QApplication::UnicodeUTF8));
         film_misc_companies_lbl->setText(QApplication::translate("MainWindow", "Compagnies diverses", 0, QApplication::UnicodeUTF8));
-        tab_sfx->setTabText(tab_sfx->indexOf(tab_misc), QApplication::translate("MainWindow", "Divers", 0, QApplication::UnicodeUTF8));
+        tabs->setTabText(tabs->indexOf(tab_misc), QApplication::translate("MainWindow", "Divers", 0, QApplication::UnicodeUTF8));
         film_fullsize_cover->setText(QString());
-        tab_sfx->setTabText(tab_sfx->indexOf(tab_fullcover), QApplication::translate("MainWindow", "Image", 0, QApplication::UnicodeUTF8));
-        tab_sfx->setTabText(tab_sfx->indexOf(tab_2), QApplication::translate("MainWindow", "Historique", 0, QApplication::UnicodeUTF8));
+        tabs->setTabText(tabs->indexOf(tab_fullcover), QApplication::translate("MainWindow", "Image", 0, QApplication::UnicodeUTF8));
+#ifndef QT_NO_TOOLTIP
+        history->setToolTip(QApplication::translate("MainWindow", "Double-cliquez pour afficher ce film", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_TOOLTIP
+        tabs->setTabText(tabs->indexOf(tab_2), QApplication::translate("MainWindow", "Historique", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

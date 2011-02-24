@@ -40,7 +40,7 @@
      </layout>
     </item>
     <item>
-     <widget class="QTabWidget" name="tab_sfx">
+     <widget class="QTabWidget" name="tabs">
       <property name="maximumSize">
        <size>
         <width>16777215</width>
@@ -877,7 +877,11 @@
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_36">
         <item>
-         <widget class="QListWidget" name="history"/>
+         <widget class="QListWidget" name="history">
+          <property name="toolTip">
+           <string>Double-cliquez pour afficher ce film</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>

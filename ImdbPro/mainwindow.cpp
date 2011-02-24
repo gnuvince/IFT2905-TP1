@@ -179,7 +179,6 @@ void MainWindow::dispatch(const QMap<QString, QStringList> &film, const QPixmap 
             files->append(filename);
             ui->history->addItem(filename);
             QListWidgetItem* current = ui->history->item(ui->history->count() - 1);
-            qDebug() << current;
             current->setIcon(image);
         }
     }
@@ -322,6 +321,7 @@ QString MainWindow::save_film(const QMap<QString, QStringList> &film) {
 void MainWindow::load_existing_movie(QListWidgetItem *item) {
     QString filename = QString("/tmp/") + item->text();
     imdb->changeFilmLocal(filename);
+    ui->tabs->setCurrentWidget(ui->tab_general);
 }
 
 void MainWindow::display_window_title(const QString &string) {

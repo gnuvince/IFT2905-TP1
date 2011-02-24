@@ -1,0 +1,16 @@
+H11 - IFT2905 - TP1
+===================
+
+Équipe
+------
+    Vincent Foley-Bourgon (FOLV08078309)
+    Éric Thivierge (THIE09016601)
+
+SimpleIMDB
+----------
+    Interface simple pour avoir les informations générales d'un film.
+
+ImdbPro
+-------
+    Interface avancée contenant les informations de production, distribution,
+    techniques, etc. d'un film.
